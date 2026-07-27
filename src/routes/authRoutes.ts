@@ -115,7 +115,7 @@ router.get('/spotify/authorize', (req, res) => {
 });
 
 router.get('/spotify/callback', async (req, res) => {
-  const { code, error } = req.query;
+  const { code, error, state } = req.query;
 
   try {
     if (error) {
@@ -132,60 +132,119 @@ router.get('/spotify/callback', async (req, res) => {
     // Get user profile from Spotify
     const userProfile = await spotifyConnector.getUserProfile(tokenData.accessToken);
 
-    // Check if user already exists
-    const existingUser = await query(
-      'SELECT id, email, username FROM users WHERE spotify_id = $1',
-      [userProfile.id]
-    );
-
-    let userId: string;
-    let token: string;
-
-    if (existingUser.rows.length > 0) {
-      // Update existing user with new token
-      userId = existingUser.rows[0].id;
-
-      const expiresAt = new Date(Date.now() + tokenData.expiresIn * 1000);
-
-      await query(
-        `UPDATE users
-         SET spotify_access_token = $1,
-             spotify_refresh_token = $2,
-             spotify_expires_at = $3,
-             updated_at = NOW()
-         WHERE id = $4`,
-        [tokenData.accessToken, tokenData.refreshToken || null, expiresAt, userId]
-      );
-    } else {
-      // Create new user
-      userId = uuidv4();
-      const expiresAt = new Date(Date.now() + tokenData.expiresIn * 1000);
-
-      await query(
-        `INSERT INTO users (id, email, username, spotify_id, spotify_access_token, spotify_refresh_token, spotify_expires_at, password_hash)
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
-        [
-          userId,
-          userProfile.external_urls?.spotify || `spotify-${userProfile.id}@example.com`,
-          userProfile.display_name || `spotify_${userProfile.id}`,
-          userProfile.id,
-          tokenData.accessToken,
-          tokenData.refreshToken || null,
-          expiresAt,
-          'spotify-oauth' // Placeholder, user authenticated via Spotify
-        ]
-      );
-    }
-
-    // Generate JWT token for our app
-    token = jwt.sign({ id: userId, email: userProfile.id }, SECRET_KEY, { expiresIn: '30d' });
-
-    // Redirect to frontend with token in query string
+    // Store Spotify data temporarily and redirect to frontend
+    // Frontend will send these tokens with user's JWT to associate
     const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
-    res.redirect(`${frontendUrl}/login?token=${token}&spotify_user=${userProfile.display_name}`);
+    const spotifyData = encodeURIComponent(JSON.stringify({
+      spotify_id: userProfile.id,
+      spotify_access_token: tokenData.accessToken,
+      spotify_refresh_token: tokenData.refreshToken,
+      spotify_expires_at: new Date(Date.now() + tokenData.expiresIn * 1000).toISOString(),
+    }));
+
+    res.redirect(`${frontendUrl}/?spotify_data=${spotifyData}`);
+    return;
+
   } catch (error) {
     console.error('Spotify callback error:', error);
-    res.status(500).json({ error: 'Spotify authentication failed' });
+    const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
+    res.redirect(`${frontendUrl}/?spotify_error=authorization_failed`);
+  }
+});
+
+// Get user's Spotify playlists
+router.get('/spotify/playlists', async (req, res) => {
+  try {
+    // Get JWT token from Authorization header
+    const authHeader = req.headers.authorization;
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return res.status(401).json({ error: 'Missing or invalid authorization token' });
+    }
+
+    const token = authHeader.slice(7);
+
+    // Verify and decode JWT
+    let decoded: any;
+    try {
+      decoded = jwt.verify(token, SECRET_KEY);
+    } catch (err) {
+      return res.status(401).json({ error: 'Invalid or expired token' });
+    }
+
+    const userId = decoded.id;
+
+    // Get user's Spotify tokens from database
+    const result = await query(
+      'SELECT spotify_access_token, spotify_refresh_token, spotify_expires_at FROM users WHERE id = $1',
+      [userId]
+    );
+
+    if (result.rows.length === 0 || !result.rows[0].spotify_access_token) {
+      return res.status(400).json({ error: 'Spotify not connected' });
+    }
+
+    const spotifyAccessToken = result.rows[0].spotify_access_token;
+
+    // Fetch playlists from Spotify
+    const playlists = await spotifyConnector.getUserPlaylists(spotifyAccessToken, 50);
+
+    res.json({
+      playlists: playlists.map((p: any) => ({
+        id: p.id,
+        name: p.name,
+        description: p.description,
+        image: p.images?.[0]?.url,
+      }))
+    });
+  } catch (error) {
+    console.error('Error fetching playlists:', error);
+    res.status(500).json({ error: 'Failed to fetch playlists' });
+  }
+});
+
+// Associate Spotify to currently logged-in user
+router.post('/spotify/associate', async (req, res) => {
+  try {
+    const { spotify_id, spotify_access_token, spotify_refresh_token, spotify_expires_at } = req.body;
+
+    // Get JWT token from Authorization header
+    const authHeader = req.headers.authorization;
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return res.status(401).json({ error: 'Missing or invalid authorization token' });
+    }
+
+    const token = authHeader.slice(7);
+
+    // Verify and decode JWT
+    let decoded: any;
+    try {
+      decoded = jwt.verify(token, SECRET_KEY);
+    } catch (err) {
+      return res.status(401).json({ error: 'Invalid or expired token' });
+    }
+
+    const userId = decoded.id;
+
+    // Update user with Spotify data
+    await query(
+      `UPDATE users
+       SET spotify_id = $1,
+           spotify_access_token = $2,
+           spotify_refresh_token = $3,
+           spotify_expires_at = $4,
+           updated_at = NOW()
+       WHERE id = $5`,
+      [spotify_id, spotify_access_token, spotify_refresh_token, spotify_expires_at, userId]
+    );
+
+    res.json({
+      message: 'Spotify account associated successfully',
+      spotify_id,
+      user_id: userId
+    });
+  } catch (error) {
+    console.error('Spotify association error:', error);
+    res.status(500).json({ error: 'Failed to associate Spotify account' });
   }
 });
 
