@@ -1,0 +1,552 @@
+[
+    {
+        "text": "Qui était le premier président des États-Unis?",
+        "choices": [
+            "George Washington",
+            "Abraham Lincoln",
+            "Thomas Jefferson",
+            "John Adams"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "En quelle année a eu lieu la Révolution française?",
+        "choices": [
+            "1789",
+            "1776",
+            "1815",
+            "1848"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel empire a été dirigé par Jules César?",
+        "choices": [
+            "Empire romain",
+            "Empire byzantin",
+            "Empire ottoman",
+            "Empire carolingien"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Qui a découvert l'Amérique en 1492?",
+        "choices": [
+            "Christophe Colomb",
+            "Ferdinand Magellan",
+            "Vasco de Gama",
+            "Hernán Cortés"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel roi de France a été guillotiné pendant la Révolution française?",
+        "choices": [
+            "Louis XVI",
+            "Louis XIV",
+            "Louis XV",
+            "Napoléon Bonaparte"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quelle guerre a été appelée la Première Guerre mondiale?",
+        "choices": [
+            "La guerre de 1914-1918",
+            "La guerre de 1939-1945",
+            "La guerre de Sécession",
+            "La guerre de 1870"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "En quelle année l'Empire romain est-il tombé?",
+        "choices": [
+            "476",
+            "330",
+            "1492",
+            "1066"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel événement a marqué la fin de la Seconde Guerre mondiale en Europe?",
+        "choices": [
+            "La chute de Berlin",
+            "L'attaque de Pearl Harbor",
+            "Le débarquement en Normandie",
+            "La signature du traité de Versailles"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel était le nom de la femme qui a dirigé la Grande-Bretagne pendant la Seconde Guerre mondiale?",
+        "choices": [
+            "Winston Churchill",
+            "Margaret Thatcher",
+            "Élisabeth II",
+            "Clara Barton"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quelle civilisation a construit les pyramides de Gizeh?",
+        "choices": [
+            "Les Égyptiens",
+            "Les Mayas",
+            "Les Romains",
+            "Les Grecs"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Qui était le leader de l'URSS pendant la Seconde Guerre mondiale?",
+        "choices": [
+            "Joseph Staline",
+            "Vladimir Lénine",
+            "Nikita Khrouchtchev",
+            "Leon Trotsky"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel explorateur a été le premier Européen à atteindre l'Inde par la mer?",
+        "choices": [
+            "Vasco de Gama",
+            "Christophe Colomb",
+            "Ferdinand Magellan",
+            "Hernán Cortés"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel traité a mis fin à la Première Guerre mondiale?",
+        "choices": [
+            "Le traité de Versailles",
+            "Le traité de Tordesillas",
+            "Le traité de Paris",
+            "Le traité de Saint-Germain"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel roi d'Angleterre a été connu sous le nom de Richard Cœur de Lion?",
+        "choices": [
+            "Richard Ier",
+            "Jean sans Terre",
+            "Henri VIII",
+            "Édouard III"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel empereur français a été exilé à l'île d'Elbe avant de revenir au pouvoir?",
+        "choices": [
+            "Napoléon Bonaparte",
+            "Louis XVI",
+            "Charles de Gaulle",
+            "Napoléon III"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel empire a été dirigé par Alexandre le Grand?",
+        "choices": [
+            "Empire macédonien",
+            "Empire perse",
+            "Empire romain",
+            "Empire ottoman"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel président des États-Unis a signé la Proclamation d'émancipation?",
+        "choices": [
+            "Abraham Lincoln",
+            "George Washington",
+            "Thomas Jefferson",
+            "Andrew Jackson"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel événement est survenu en 1066 en Angleterre?",
+        "choices": [
+            "La bataille de Hastings",
+            "La guerre de Cent Ans",
+            "La Réforme anglicane",
+            "La grande peste noire"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel était le nom de la route commerciale qui reliait l'Orient à l'Occident au Moyen Âge?",
+        "choices": [
+            "La Route de la soie",
+            "La Route des épices",
+            "La Route des Indes",
+            "La Route du sel"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel événement a eu lieu en 1989 et a marqué la fin de la Guerre froide?",
+        "choices": [
+            "La chute du Mur de Berlin",
+            "La signature des Accords de paix de Camp David",
+            "La dissolution de l'URSS",
+            "Le début de la guerre du Golfe"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel roi de France est connu pour avoir construit le château de Versailles?",
+        "choices": [
+            "Louis XIV",
+            "Louis XV",
+            "Louis XVI",
+            "François Ier"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel événement a marqué le début de la Guerre de Sécession aux États-Unis?",
+        "choices": [
+            "L'attaque de Fort Sumter",
+            "La bataille de Gettysburg",
+            "La proclamation d'émancipation",
+            "La signature du traité de paix"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quelle dynastie a régné sur la Chine pendant plus de deux siècles à partir du 13e siècle?",
+        "choices": [
+            "Les Mongols",
+            "Les Han",
+            "Les Tang",
+            "Les Ming"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel était le nom du roi britannique qui a abdiqué en 1936?",
+        "choices": [
+            "Édouard VIII",
+            "George VI",
+            "George V",
+            "Henry VIII"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel général français a dirigé les forces françaises lors de la bataille de Waterloo?",
+        "choices": [
+            "Napoléon Bonaparte",
+            "Charles de Gaulle",
+            "Louis XIV",
+            "Maréchal Ney"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel est le nom de la célèbre expédition menée par Lewis et Clark?",
+        "choices": [
+            "L'expédition de la Louisiane",
+            "L'expédition du Colorado",
+            "L'expédition du Mississippi",
+            "L'expédition de la frontière"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel est le nom du conflit qui a opposé les Alliés aux puissances de l'Axe de 1939 à 1945?",
+        "choices": [
+            "Seconde Guerre mondiale",
+            "Première Guerre mondiale",
+            "Guerre de Corée",
+            "Guerre du Vietnam"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel traité a mis fin à la guerre de 100 ans entre la France et l'Angleterre?",
+        "choices": [
+            "Le traité de Picquigny",
+            "Le traité de Paris",
+            "Le traité de Brétigny",
+            "Le traité de Saint-Germain"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel était le nom du dirigeant soviétique qui a introduit les réformes appelées 'perestroïka' et 'glasnost'?",
+        "choices": [
+            "Mikhaïl Gorbatchev",
+            "Leonid Brejnev",
+            "Nikita Khrouchtchev",
+            "Joseph Staline"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel empire a été dirigé par Charlemagne?",
+        "choices": [
+            "Empire carolingien",
+            "Empire romain",
+            "Empire byzantin",
+            "Empire franc"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel événement historique est associé à la date du 11 septembre 2001?",
+        "choices": [
+            "Les attentats du World Trade Center",
+            "La chute du Mur de Berlin",
+            "La signature des accords de Camp David",
+            "Le début de la guerre en Irak"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel traité a mis fin à la guerre de Sécession aux États-Unis?",
+        "choices": [
+            "Le traité de l'Appomattox",
+            "Le traité de Versailles",
+            "Le traité de Paris",
+            "Le traité de Ghent"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel explorateur a été le premier Européen à atteindre l'Afrique du Sud?",
+        "choices": [
+            "Bartolomeu Dias",
+            "Vasco de Gama",
+            "Christophe Colomb",
+            "Ferdinand Magellan"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel général a dirigé les forces alliées lors du débarquement en Normandie en 1944?",
+        "choices": [
+            "Dwight D. Eisenhower",
+            "Douglas MacArthur",
+            "Bernard Montgomery",
+            "George S. Patton"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel mouvement politique est né en Russie en 1917?",
+        "choices": [
+            "Le bolchevisme",
+            "Le fascisme",
+            "Le socialisme",
+            "Le libéralisme"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel roi de France est célèbre pour sa construction du Palais du Louvre?",
+        "choices": [
+            "François Ier",
+            "Louis XIV",
+            "Louis XVI",
+            "Henri IV"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel traité a mis fin à la Première Guerre mondiale?",
+        "choices": [
+            "Le traité de Versailles",
+            "Le traité de Tordesillas",
+            "Le traité de Paris",
+            "Le traité de Saint-Germain"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel est le nom de la période de renouveau artistique et intellectuel en Europe au 16e siècle?",
+        "choices": [
+            "La Renaissance",
+            "Le Baroque",
+            "Le Romantisme",
+            "L'Humanisme"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel événement a marqué la fin du régime de l'apartheid en Afrique du Sud?",
+        "choices": [
+            "L'élection de Nelson Mandela",
+            "La fin de la guerre de Sécession",
+            "La signature des accords de paix de Camp David",
+            "La chute du Mur de Berlin"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel était le nom du mouvement religieux qui a débuté avec les 95 thèses de Martin Luther?",
+        "choices": [
+            "La Réforme",
+            "La Contre-Réforme",
+            "La Révolution",
+            "Le Renouveau"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel était le nom du dernier tsar de Russie avant la Révolution de 1917?",
+        "choices": [
+            "Nicolas II",
+            "Alexandre III",
+            "Pierre le Grand",
+            "Ivan le Terrible"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel est le nom du conflit qui a eu lieu en 1950-1953 sur la péninsule coréenne?",
+        "choices": [
+            "La Guerre de Corée",
+            "La Guerre du Vietnam",
+            "La Guerre de Sécession",
+            "La Guerre des Malouines"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel célèbre architecte a conçu la basilique Saint-Pierre au Vatican?",
+        "choices": [
+            "Michel-Ange",
+            "Leonardo da Vinci",
+            "Raphaël",
+            "Brunelleschi"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quelle dynastie a régné sur la France de 1589 à 1792?",
+        "choices": [
+            "Les Bourbons",
+            "Les Valois",
+            "Les Mérovingiens",
+            "Les Carolingiens"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel événement historique a eu lieu en 1969 et a marqué un grand pas pour l'humanité?",
+        "choices": [
+            "L'alunissage d'Apollo 11",
+            "La chute du Mur de Berlin",
+            "La fin de la guerre du Vietnam",
+            "Le début de la Révolution culturelle"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel est le nom du célèbre général qui a conquis la Gaule au 1er siècle av. J.-C.?",
+        "choices": [
+            "Jules César",
+            "Alexandre le Grand",
+            "Hannibal",
+            "Charlemagne"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel était le nom du dirigeant nazi pendant la Seconde Guerre mondiale?",
+        "choices": [
+            "Adolf Hitler",
+            "Benito Mussolini",
+            "Joseph Staline",
+            "Hirohito"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel pays a été le théâtre de la Révolution culturelle initiée par Mao Zedong?",
+        "choices": [
+            "Chine",
+            "Vietnam",
+            "Corée du Nord",
+            "Laos"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel était le nom du dirigeant français pendant la Révolution française?",
+        "choices": [
+            "Maximilien Robespierre",
+            "Louis XVI",
+            "Napoléon Bonaparte",
+            "Georges Danton"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    },
+    {
+        "text": "Quel général américain a dirigé les forces alliées en Europe pendant la Seconde Guerre mondiale?",
+        "choices": [
+            "Dwight D. Eisenhower",
+            "George Patton",
+            "Douglas MacArthur",
+            "Omar Bradley"
+        ],
+        "correctAnswer": 0,
+        "type": "Histoire"
+    }
+]

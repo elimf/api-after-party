@@ -1,0 +1,398 @@
+[
+    {
+        "text": "Quelle est la plus grande planète du système solaire?",
+        "choices": [
+            "Mars",
+            "Terre",
+            "Jupiter",
+            "Saturne"
+        ],
+        "correctAnswer": 2,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel élément chimique a le symbole H?",
+        "choices": [
+            "Hydrogène",
+            "Hélium",
+            "Lithium",
+            "Béryllium"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le principal gaz à effet de serre produit par l'homme?",
+        "choices": [
+            "Dioxyde de carbone",
+            "Méthane",
+            "Oxyde nitreux",
+            "Ozone"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quelle est la vitesse de la lumière dans le vide?",
+        "choices": [
+            "300 000 km/s",
+            "150 000 km/s",
+            "100 000 km/s",
+            "200 000 km/s"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quelle partie de la cellule est responsable de la production d'énergie?",
+        "choices": [
+            "Noyau",
+            "Mitochondrie",
+            "Ribosome",
+            "Appareil de Golgi"
+        ],
+        "correctAnswer": 1,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quelle est la formule chimique de l'eau?",
+        "choices": [
+            "H2O",
+            "CO2",
+            "NaCl",
+            "CH4"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le plus grand mammifère terrestre?",
+        "choices": [
+            "Éléphant",
+            "Rhinocéros",
+            "Girafe",
+            "Hippopotame"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est l'élément chimique dont le symbole est Au?",
+        "choices": [
+            "Argon",
+            "Argent",
+            "Or",
+            "Uranium"
+        ],
+        "correctAnswer": 2,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le nom du processus par lequel les plantes fabriquent leur propre nourriture?",
+        "choices": [
+            "Photosynthèse",
+            "Respiration",
+            "Digestion",
+            "Absorption"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est l'organe principal du système circulatoire?",
+        "choices": [
+            "Cœur",
+            "Poumons",
+            "Foie",
+            "Estomac"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est l'organe principal de la respiration chez l'homme?",
+        "choices": [
+            "Poumons",
+            "Cœur",
+            "Foie",
+            "Estomac"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le phénomène qui cause les marées?",
+        "choices": [
+            "Gravité de la Lune",
+            "Vent",
+            "Courants marins",
+            "Soleil"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel scientifique est connu pour sa théorie de la relativité?",
+        "choices": [
+            "Isaac Newton",
+            "Galilée",
+            "Albert Einstein",
+            "Niels Bohr"
+        ],
+        "correctAnswer": 2,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quelle est la plus grande structure vivante sur Terre?",
+        "choices": [
+            "La Grande Barrière de Corail",
+            "Le Séquoia géant",
+            "La forêt amazonienne",
+            "Le champignon Armillaria"
+        ],
+        "correctAnswer": 3,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quelle est la principale source d'énergie pour les éruptions solaires?",
+        "choices": [
+            "Réactions nucléaires",
+            "Fusion de l'hydrogène",
+            "Combustion du carbone",
+            "Fission de l'uranium"
+        ],
+        "correctAnswer": 1,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le plus petit os du corps humain?",
+        "choices": [
+            "Étrier",
+            "Marteau",
+            "Enclume",
+            "Clavicule"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le nom de la couche externe de la Terre?",
+        "choices": [
+            "Croûte",
+            "Manteau",
+            "Noyau",
+            "Atmosphère"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est l'organe responsable de la production des globules rouges?",
+        "choices": [
+            "Moelle osseuse",
+            "Foie",
+            "Rate",
+            "Poumons"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le nom du plus grand organe du corps humain?",
+        "choices": [
+            "Peau",
+            "Foie",
+            "Cœur",
+            "Poumons"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quelle est la plus grande étoile connue?",
+        "choices": [
+            "Soleil",
+            "Sirius",
+            "VY Canis Majoris",
+            "Betelgeuse"
+        ],
+        "correctAnswer": 2,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quelle est la plus grande espèce de requin?",
+        "choices": [
+            "Requin blanc",
+            "Requin baleine",
+            "Requin tigre",
+            "Requin marteau"
+        ],
+        "correctAnswer": 1,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le nom du phénomène par lequel les matériaux se décomposent en éléments plus simples?",
+        "choices": [
+            "Dissolution",
+            "Oxydation",
+            "Érosion",
+            "Décomposition"
+        ],
+        "correctAnswer": 3,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est l'élément chimique le plus abondant dans l'univers?",
+        "choices": [
+            "Hydrogène",
+            "Hélium",
+            "Oxygène",
+            "Carbone"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est l'organe principal du système nerveux central?",
+        "choices": [
+            "Cerveau",
+            "Moelle épinière",
+            "Nerfs",
+            "Ganglions"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quelle est la principale fonction des globules blancs?",
+        "choices": [
+            "Défense de l'organisme",
+            "Transport de l'oxygène",
+            "Coagulation du sang",
+            "Stockage des nutriments"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est l'organe principal du système excréteur?",
+        "choices": [
+            "Reins",
+            "Foie",
+            "Poumons",
+            "Cœur"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le nom du phénomène qui se produit lorsque les électrons se déplacent à travers un conducteur?",
+        "choices": [
+            "Courant électrique",
+            "Magnétisme",
+            "Induction",
+            "Électrolyse"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le nom de la première femme à avoir reçu le prix Nobel?",
+        "choices": [
+            "Marie Curie",
+            "Rosalind Franklin",
+            "Ada Lovelace",
+            "Barbara McClintock"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le nom de la théorie qui décrit le comportement des particules à l'échelle subatomique?",
+        "choices": [
+            "Physique quantique",
+            "Théorie de la relativité",
+            "Physique classique",
+            "Théorie des cordes"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est l'organe du corps humain responsable de la production d'insuline?",
+        "choices": [
+            "Pancréas",
+            "Foie",
+            "Reins",
+            "Estomac"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le nom du processus par lequel les cellules se divisent pour former deux cellules filles?",
+        "choices": [
+            "Mitose",
+            "Méiose",
+            "Fission",
+            "Fusion"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quelle est la distance approximative de la Terre au Soleil?",
+        "choices": [
+            "150 millions de kilomètres",
+            "30 millions de kilomètres",
+            "500 millions de kilomètres",
+            "1 milliard de kilomètres"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le nom du champ magnétique qui protège la Terre des radiations solaires?",
+        "choices": [
+            "Magnétosphère",
+            "Ionosphère",
+            "Atmosphère",
+            "Stratosphère"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le nom du cycle par lequel l'eau passe de l'état liquide à l'état gazeux puis solide?",
+        "choices": [
+            "Cycle de l'eau",
+            "Cycle du carbone",
+            "Cycle de l'azote",
+            "Cycle de l'oxygène"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est le nom de la molécule responsable du transport de l'oxygène dans le sang?",
+        "choices": [
+            "Hémoglobine",
+            "Insuline",
+            "Collagène",
+            "Myoglobine"
+        ],
+        "correctAnswer": 0,
+        "type": "Sciences"
+    },
+    {
+        "text": "Quel est l'élément chimique représenté par le symbole O?",
+        "choices": [
+            "Or",
+            "Oxygène",
+            "Osmium",
+            "Oganesson"
+        ],
+        "correctAnswer": 1,
+        "type": "Sciences"
+    }
+]

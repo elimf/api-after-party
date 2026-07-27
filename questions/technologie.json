@@ -1,0 +1,431 @@
+[
+    {
+        "text": "Quel est le langage de programmation principalement utilisé pour le développement web côté client?",
+        "choices": [
+            "JavaScript",
+            "Python",
+            "Java",
+            "C++"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le fondateur de Microsoft?",
+        "choices": [
+            "Steve Jobs",
+            "Bill Gates",
+            "Mark Zuckerberg",
+            "Elon Musk"
+        ],
+        "correctAnswer": 1,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel système d'exploitation est développé par Apple Inc. pour ses ordinateurs personnels?",
+        "choices": [
+            "macOS",
+            "Macintosh",
+            "Linux",
+            "Apple OS"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du réseau social fondé par Mark Zuckerberg en 2004?",
+        "choices": [
+            "Facebook",
+            "Twitter",
+            "Instagram",
+            "LinkedIn"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le langage de programmation principalement utilisé pour le développement des applications Android?",
+        "choices": [
+            "Java",
+            "Swift",
+            "C#",
+            "Ruby"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel protocole est utilisé pour sécuriser les communications sur Internet?",
+        "choices": [
+            "HTTPS",
+            "FTP",
+            "HTTP",
+            "SMTP"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du moteur de recherche développé par Google?",
+        "choices": [
+            "Google Search",
+            "Bing",
+            "Yahoo!",
+            "DuckDuckGo"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du framework JavaScript populaire pour construire des interfaces utilisateur?",
+        "choices": [
+            "React",
+            "Angular",
+            "Vue.js",
+            "jQuery"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel langage de programmation est connu pour son utilisation dans les scripts côté serveur et l'analyse de données?",
+        "choices": [
+            "Python",
+            "JavaScript",
+            "PHP",
+            "Ruby"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom de la première version de l'ordinateur personnel commercialisé par Apple en 1976?",
+        "choices": [
+            "Apple I",
+            "Apple II",
+            "Macintosh",
+            "Lisa"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom de la société qui a développé le système d'exploitation Android?",
+        "choices": [
+            "Google",
+            "Android Studio",
+            "Microsoft",
+            "Samsung"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du système de gestion de base de données open source largement utilisé pour les applications web?",
+        "choices": [
+            "MySQL",
+            "Oracle",
+            "Microsoft SQL Server",
+            "PostgreSQL"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel langage de programmation est principalement utilisé pour les scripts et l'automatisation sous Unix?",
+        "choices": [
+            "Bash",
+            "Perl",
+            "Python",
+            "Ruby"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom de l'outil de gestion de versions décentralisé largement utilisé dans le développement logiciel?",
+        "choices": [
+            "Git",
+            "Subversion",
+            "Mercurial",
+            "CVS"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du service de stockage en ligne développé par Google?",
+        "choices": [
+            "Google Drive",
+            "Dropbox",
+            "OneDrive",
+            "iCloud"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom de l'architecture de processeur développée par Intel pour les ordinateurs personnels?",
+        "choices": [
+            "x86",
+            "ARM",
+            "MIPS",
+            "PowerPC"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom de la technologie qui permet de créer des environnements virtuels isolés sur un même système d'exploitation?",
+        "choices": [
+            "Virtualisation",
+            "Containerisation",
+            "Cloud Computing",
+            "Réseau privé virtuel (VPN)"
+        ],
+        "correctAnswer": 1,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom de l'outil de développement d'applications iOS créé par Apple?",
+        "choices": [
+            "Xcode",
+            "Android Studio",
+            "Visual Studio",
+            "Vision Pro"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel langage de programmation est principalement utilisé pour le développement d'applications web côté serveur?",
+        "choices": [
+            "PHP",
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du protocole utilisé pour envoyer des e-mails sur Internet?",
+        "choices": [
+            "SMTP",
+            "IMAP",
+            "POP3",
+            "HTTP"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du système d'exploitation open source développé par Linus Torvalds?",
+        "choices": [
+            "Linux",
+            "Windows",
+            "macOS",
+            "UNIX"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel langage de programmation est principalement utilisé pour le développement de jeux vidéo?",
+        "choices": [
+            "C++",
+            "Java",
+            "Python",
+            "Swift"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom de la technologie de communication sans fil utilisée pour les réseaux locaux?",
+        "choices": [
+            "Wi-Fi",
+            "Bluetooth",
+            "NFC",
+            "Infrared"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du langage de programmation développé par Sun Microsystems et utilisé pour les applications web?",
+        "choices": [
+            "Java",
+            "C#",
+            "Python",
+            "JavaScript"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du modèle de données utilisé pour stocker les données relationnelles?",
+        "choices": [
+            "Modèle relationnel",
+            "Modèle entité-association",
+            "Modèle hiérarchique",
+            "Modèle orienté objet"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du type de mémoire volatile utilisée pour stocker les données temporaires dans un ordinateur?",
+        "choices": [
+            "RAM",
+            "ROM",
+            "Cache",
+            "SSD"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du format de fichier compressé souvent utilisé pour les images sur le web?",
+        "choices": [
+            "JPEG",
+            "PNG",
+            "GIF",
+            "TIFF"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du langage de programmation souvent utilisé pour l'analyse de données et le calcul scientifique?",
+        "choices": [
+            "R",
+            "JavaScript",
+            "PHP",
+            "Ruby"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom de l'outil de développement logiciel utilisé pour la gestion des versions de code source?",
+        "choices": [
+            "Git",
+            "Subversion",
+            "Mercurial",
+            "CVS"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du langage de programmation principalement utilisé pour le développement de logiciels d'application et de systèmes?",
+        "choices": [
+            "C++",
+            "Java",
+            "Python",
+            "Swift"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du protocole utilisé pour la transmission de données audio et vidéo en continu sur Internet?",
+        "choices": [
+            "RTSP",
+            "HTTP",
+            "FTP",
+            "SMTP"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom de l'outil de gestion de projet qui utilise des tableaux Kanban pour organiser les tâches?",
+        "choices": [
+            "Trello",
+            "Jira",
+            "Asana",
+            "Kanban"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du système de gestion de contenu populaire utilisé pour créer des sites web?",
+        "choices": [
+            "WordPress",
+            "Drupal",
+            "Joomla",
+            "Magento"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du réseau social axé sur le partage de photos et de vidéos développé par Facebook?",
+        "choices": [
+            "Instagram",
+            "Snapchat",
+            "Pinterest",
+            "BeReal"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du langage de programmation principalement utilisé pour le développement de systèmes embarqués?",
+        "choices": [
+            "C",
+            "Python",
+            "Java",
+            "Swift"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du service de cloud computing développé par Amazon?",
+        "choices": [
+            "AWS",
+            "Google Cloud Platform",
+            "Microsoft Azure",
+            "Amazon Prime Video"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du langage de programmation développé par Apple pour les applications iOS?",
+        "choices": [
+            "Swift",
+            "Java",
+            "Objective-C",
+            "Kotlin"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom de l'outil de développement intégré utilisé principalement pour le développement de logiciels Java?",
+        "choices": [
+            "IntelliJ IDEA",
+            "Eclipse",
+            "NetBeans",
+            "Xcode"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    },
+    {
+        "text": "Quel est le nom du langage de programmation principalement utilisé pour le développement de logiciels systèmes?",
+        "choices": [
+            "C",
+            "Python",
+            "Java",
+            "JavaScript"
+        ],
+        "correctAnswer": 0,
+        "type": "Technologie"
+    }
+]

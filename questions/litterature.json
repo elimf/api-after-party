@@ -1,0 +1,475 @@
+[
+    {
+        "text": "Quel écrivain français a écrit 'Les Misérables'?",
+        "choices": [
+            "Victor Hugo",
+            "Émile Zola",
+            "Gustave Flaubert",
+            "Honoré de Balzac"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Qui est l'auteur du roman '1984'?",
+        "choices": [
+            "Aldous Huxley",
+            "George Orwell",
+            "Ray Bradbury",
+            "Jules Verne"
+        ],
+        "correctAnswer": 1,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain britannique a écrit 'Orgueil et Préjugés'?",
+        "choices": [
+            "Jane Austen",
+            "Emily Brontë",
+            "Charlotte Brontë",
+            "Mary Shelley"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel auteur est connu pour avoir écrit 'Les Frères Karamazov'?",
+        "choices": [
+            "Fiodor Dostoïevski",
+            "Léon Tolstoï",
+            "Anton Tchekhov",
+            "Vladimir Nabokov"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel roman de Gabriel Garcia Marquez a remporté le Prix Nobel de Littérature en 1982?",
+        "choices": [
+            "Cent ans de solitude",
+            "L'Amour aux temps du choléra",
+            "Chronique d'une mort annoncée",
+            "Le Général dans son labyrinthe"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain américain est l'auteur de 'Moby Dick'?",
+        "choices": [
+            "Herman Melville",
+            "Mark Twain",
+            "Nathaniel Hawthorne",
+            "Edgar Allan Poe"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel auteur français a écrit 'Madame Bovary'?",
+        "choices": [
+            "Gustave Flaubert",
+            "Émile Zola",
+            "Honoré de Balzac",
+            "Marcel Proust"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Qui est l'auteur de 'Le Petit Prince'?",
+        "choices": [
+            "Antoine de Saint-Exupéry",
+            "Jules Verne",
+            "Marcel Proust",
+            "Paul Valéry"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain a écrit 'Le Seigneur des anneaux'?",
+        "choices": [
+            "J.R.R. Tolkien",
+            "C.S. Lewis",
+            "J.K. Rowling",
+            "George R.R. Martin"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel roman est considéré comme l'œuvre principale de l'auteur américain F. Scott Fitzgerald?",
+        "choices": [
+            "Gatsby le Magnifique",
+            "Tender is the Night",
+            "The Beautiful and Damned",
+            "This Side of Paradise"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Qui a écrit 'L'Étranger'?",
+        "choices": [
+            "Albert Camus",
+            "Jean-Paul Sartre",
+            "Simone de Beauvoir",
+            "André Gide"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain est connu pour ses romans de science-fiction, dont 'Dune'?",
+        "choices": [
+            "Frank Herbert",
+            "Isaac Asimov",
+            "Arthur C. Clarke",
+            "Philip K. Dick"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel auteur est connu pour ses œuvres de fantasy comme 'Harry Potter'?",
+        "choices": [
+            "J.K. Rowling",
+            "J.R.R. Tolkien",
+            "C.S. Lewis",
+            "Philip Pullman"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel roman de Mary Shelley est considéré comme le premier roman de science-fiction?",
+        "choices": [
+            "Frankenstein",
+            "L'Île mystérieuse",
+            "Les Voyageurs de l'espace",
+            "Le Dernier Homme"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain est l'auteur de 'Le Parfum'?",
+        "choices": [
+            "Patrick Süskind",
+            "J.M. Coetzee",
+            "Salman Rushdie",
+            "Jorge Luis Borges"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel roman de George Orwell décrit une dystopie dans un futur totalitaire?",
+        "choices": [
+            "1984",
+            "La Ferme des animaux",
+            "Les Fleurs pour Algernon",
+            "Le Meilleur des mondes"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain japonais a écrit 'Kafka sur le rivage'?",
+        "choices": [
+            "Haruki Murakami",
+            "Yoko Ogawa",
+            "Banana Yoshimoto",
+            "Kazuo Ishiguro"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel auteur est connu pour ses romans policiers, dont 'Le Nom de la rose'?",
+        "choices": [
+            "Umberto Eco",
+            "Andrea Camilleri",
+            "Dashiell Hammett",
+            "Agatha Christie"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel auteur français est connu pour ses œuvres de science-fiction telles que 'La Planète des singes'?",
+        "choices": [
+            "Pierre Boulle",
+            "Jules Verne",
+            "André Breton",
+            "Ray Bradbury"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain est l'auteur de 'Les Souffrances du jeune Werther'?",
+        "choices": [
+            "Johann Wolfgang von Goethe",
+            "Friedrich Schiller",
+            "Hermann Hesse",
+            "Thomas Mann"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain russe est connu pour ses romans psychologiques et sociaux comme 'Crime et Châtiment'?",
+        "choices": [
+            "Fiodor Dostoïevski",
+            "Léon Tolstoï",
+            "Anton Tchekhov",
+            "Ivan Tourgueniev"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel auteur est connu pour ses œuvres de la Beat Generation, dont 'Sur la route'?",
+        "choices": [
+            "Jack Kerouac",
+            "Allen Ginsberg",
+            "William S. Burroughs",
+            "J.D. Salinger"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain est l'auteur de 'Les Évangiles du crime'?",
+        "choices": [
+            "Jean-Patrick Manchette",
+            "Fred Vargas",
+            "Maurice Leblanc",
+            "Georges Simenon"
+        ],
+        "correctAnswer": 1,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain a rédigé 'Les Trois Mousquetaires'?",
+        "choices": [
+            "Alexandre Dumas",
+            "Victor Hugo",
+            "Gustave Flaubert",
+            "Honoré de Balzac"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain est connu pour sa série de romans 'Harry Potter'?",
+        "choices": [
+            "J.K. Rowling",
+            "J.R.R. Tolkien",
+            "C.S. Lewis",
+            "Philip Pullman"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel roman de Jane Austen est centré sur la famille Bennet et leurs relations sociales?",
+        "choices": [
+            "Orgueil et Préjugés",
+            "Raisons et Sentiments",
+            "Emma",
+            "Northanger Abbey"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain a écrit 'Le Vieil Homme et la Mer'?",
+        "choices": [
+            "Ernest Hemingway",
+            "John Steinbeck",
+            "Mark Twain",
+            "F. Scott Fitzgerald"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain a remporté le Prix Nobel de Littérature en 1954 pour ses œuvres, dont 'Le Vieil Homme et la Mer'?",
+        "choices": [
+            "Ernest Hemingway",
+            "William Faulkner",
+            "John Steinbeck",
+            "Graham Greene"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel auteur britannique a écrit 'Harry Potter à l'école des sorciers'?",
+        "choices": [
+            "J.K. Rowling",
+            "J.R.R. Tolkien",
+            "Philip Pullman",
+            "C.S. Lewis"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain américain est connu pour ses romans sur la guerre, dont 'L'Attrape-cœurs'?",
+        "choices": [
+            "J.D. Salinger",
+            "Ernest Hemingway",
+            "F. Scott Fitzgerald",
+            "John Steinbeck"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain belge est l'auteur de 'Les Aventures de Tintin'?",
+        "choices": [
+            "Hergé",
+            "Peyo",
+            "André Franquin",
+            "Jacques Martin"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel roman de Louis-Ferdinand Céline est considéré comme une œuvre majeure de la littérature française du XXe siècle?",
+        "choices": [
+            "Voyage au bout de la nuit",
+            "Mort à crédit",
+            "Rigadoon",
+            "Casse-pipe"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel roman de J.R.R. Tolkien a été publié en 1937?",
+        "choices": [
+            "Le Hobbit",
+            "Le Seigneur des anneaux",
+            "Bilbo le Hobbit",
+            "Les Enfants de Hurin"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain est l'auteur de 'Le Parfum'?",
+        "choices": [
+            "Patrick Süskind",
+            "J.M. Coetzee",
+            "Salman Rushdie",
+            "Jorge Luis Borges"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain est connu pour son œuvre 'Les Chants de Maldoror'?",
+        "choices": [
+            "Comte de Lautréamont",
+            "Charles Baudelaire",
+            "Paul Verlaine",
+            "Arthur Rimbaud"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain est l'auteur de 'Le Nom de la Rose'?",
+        "choices": [
+            "Umberto Eco",
+            "Dan Brown",
+            "Mario Puzo",
+            "John Grisham"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel auteur français a écrit 'L'Écume des jours'?",
+        "choices": [
+            "Boris Vian",
+            "Raymond Queneau",
+            "Georges Simenon",
+            "Jules Romains"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain américain est l'auteur de 'Le Grand Gatsby'?",
+        "choices": [
+            "F. Scott Fitzgerald",
+            "Ernest Hemingway",
+            "John Steinbeck",
+            "Ray Bradbury"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain a créé le personnage de Sherlock Holmes?",
+        "choices": [
+            "Arthur Conan Doyle",
+            "Agatha Christie",
+            "Edgar Allan Poe",
+            "Wilkie Collins"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel auteur français a écrit 'La Peste'?",
+        "choices": [
+            "Albert Camus",
+            "Jean-Paul Sartre",
+            "Simone de Beauvoir",
+            "André Gide"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain américain est l'auteur de 'Les Raisins de la colère'?",
+        "choices": [
+            "John Steinbeck",
+            "Ernest Hemingway",
+            "F. Scott Fitzgerald",
+            "William Faulkner"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel roman de Victor Hugo est centré sur l'architecture et les luttes sociales à Paris au Moyen Âge?",
+        "choices": [
+            "Notre-Dame de Paris",
+            "Les Misérables",
+            "Le Dernier Jour d'un Condamné",
+            "Claude Gueux"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    },
+    {
+        "text": "Quel écrivain est l'auteur de 'Mémoires d'une jeune fille rangée'?",
+        "choices": [
+            "Simone de Beauvoir",
+            "Marguerite Yourcenar",
+            "Françoise Sagan",
+            "Colette"
+        ],
+        "correctAnswer": 0,
+        "type": "Littérature"
+    }
+]

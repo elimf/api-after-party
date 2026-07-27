@@ -1,0 +1,387 @@
+[
+    {
+        "text": "Quel film a remporté l'Oscar du Meilleur Film en 1994?",
+        "choices": [
+            "Forrest Gump",
+            "Pulp Fiction",
+            "Shawshank Redemption",
+            "The Lion King"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Dans quelle série télévisée retrouve-t-on le personnage de Walter White?",
+        "choices": [
+            "Breaking Bad",
+            "Game of Thrones",
+            "The Wire",
+            "Narcos"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film a été réalisé par Quentin Tarantino en 1992?",
+        "choices": [
+            "Reservoir Dogs",
+            "Kill Bill",
+            "Django Unchained",
+            "Inglourious Basterds"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel est le nom du personnage principal dans la série 'Stranger Things'?",
+        "choices": [
+            "Eleven",
+            "Dustin",
+            "Mike",
+            "Lucas"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel acteur joue le rôle de Tony Stark dans l'univers Marvel?",
+        "choices": [
+            "Robert Downey Jr.",
+            "Chris Evans",
+            "Mark Ruffalo",
+            "Chris Hemsworth"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel est le titre du premier film de la saga 'Harry Potter'?",
+        "choices": [
+            "Harry Potter à l'école des sorciers",
+            "Harry Potter et la Chambre des secrets",
+            "Harry Potter et le Prisonnier d'Azkaban",
+            "Harry Potter et la Coupe de feu"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Dans quel film trouve-t-on le personnage de Jack Dawson?",
+        "choices": [
+            "Titanic",
+            "Inception",
+            "The Revenant",
+            "The Great Gatsby"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel est le nom du réalisateur de 'Inception'?",
+        "choices": [
+            "Christopher Nolan",
+            "Steven Spielberg",
+            "James Cameron",
+            "Ridley Scott"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quelle série suit les aventures de quatre femmes à New York?",
+        "choices": [
+            "Sex and the City",
+            "Friends",
+            "How I Met Your Mother",
+            "The Big Bang Theory"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film a été réalisé par Martin Scorsese en 2006?",
+        "choices": [
+            "The Departed",
+            "Goodfellas",
+            "Casino",
+            "Taxi Driver"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel est le nom du personnage principal dans la série 'The Mandalorian'?",
+        "choices": [
+            "Din Djarin",
+            "Grogu",
+            "Boba Fett",
+            "Mace Windu"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film a introduit le personnage de James Bond?",
+        "choices": [
+            "Dr. No",
+            "Goldfinger",
+            "Thunderball",
+            "From Russia with Love"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Dans quel film trouve-t-on le personnage de Forrest Gump?",
+        "choices": [
+            "Forrest Gump",
+            "A Beautiful Mind",
+            "Cast Away",
+            "Saving Private Ryan"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel est le nom de l'acteur qui joue Jack Sparrow dans 'Pirates des Caraïbes'?",
+        "choices": [
+            "Johnny Depp",
+            "Orlando Bloom",
+            "Geoffrey Rush",
+            "Harrison Ford"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film de science-fiction est réalisé par Ridley Scott en 1982?",
+        "choices": [
+            "Blade Runner",
+            "Alien",
+            "The Martian",
+            "Prometheus"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel acteur a incarné le personnage de Neo dans 'The Matrix'?",
+        "choices": [
+            "Keanu Reeves",
+            "Laurence Fishburne",
+            "Hugo Weaving",
+            "Matthew McConaughey"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film d'animation de Pixar met en scène des jouets vivants?",
+        "choices": [
+            "Toy Story",
+            "Finding Nemo",
+            "Monsters, Inc.",
+            "Up"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film est basé sur le livre de J.R.R. Tolkien 'Le Hobbit'?",
+        "choices": [
+            "Le Hobbit: Un voyage inattendu",
+            "Le Seigneur des Anneaux: La Communauté de l'Anneau",
+            "Le Seigneur des Anneaux: Les Deux Tours",
+            "Le Seigneur des Anneaux: Le Retour du Roi"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film de guerre a remporté l'Oscar du Meilleur Film en 2018?",
+        "choices": [
+            "The Shape of Water",
+            "Dunkirk",
+            "Darkest Hour",
+            "1917"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quelle série télévisée suit les aventures d'un groupe de survivants après une apocalypse zombie?",
+        "choices": [
+            "The Walking Dead",
+            "Fear the Walking Dead",
+            "Z Nation",
+            "Black Summer"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film est basé sur le roman de Stephen King 'Shining'?",
+        "choices": [
+            "The Shining",
+            "Carrie",
+            "It",
+            "Misery"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel est le nom du réalisateur de 'Pulp Fiction'?",
+        "choices": [
+            "Quentin Tarantino",
+            "Martin Scorsese",
+            "Francis Ford Coppola",
+            "George Lucas"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film a popularisé le personnage de James Bond?",
+        "choices": [
+            "Dr. No",
+            "Goldfinger",
+            "Thunderball",
+            "From Russia with Love"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film d'animation de Studio Ghibli raconte l'histoire d'une jeune sorcière nommée Kiki?",
+        "choices": [
+            "Kiki la petite sorcière",
+            "Mon voisin Totoro",
+            "Princesse Mononoké",
+            "Le Voyage de Chihiro"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quelle série télévisée suit les aventures de détectives à New York, dont l'un des personnages est Sherlock Holmes?",
+        "choices": [
+            "Elementary",
+            "Sherlock",
+            "Castle",
+            "The Mentalist"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film est basé sur le roman de J.R.R. Tolkien 'Le Seigneur des Anneaux'?",
+        "choices": [
+            "Le Seigneur des Anneaux: La Communauté de l'Anneau",
+            "Le Hobbit: Un voyage inattendu",
+            "Les Chroniques de Narnia",
+            "Harry Potter et les Reliques de la Mort"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film mettant en vedette Leonardo DiCaprio est un thriller psychologique réalisé par Christopher Nolan?",
+        "choices": [
+            "Inception",
+            "Shutter Island",
+            "The Revenant",
+            "Catch Me If You Can"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film de super-héros met en scène le personnage de Wonder Woman?",
+        "choices": [
+            "Wonder Woman",
+            "Justice League",
+            "Aquaman",
+            "Batman v Superman"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film est réalisé par Stanley Kubrick et met en scène un vaisseau spatial en mission?",
+        "choices": [
+            "2001: L'Odyssée de l'espace",
+            "A Clockwork Orange",
+            "Full Metal Jacket",
+            "Eyes Wide Shut"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film d'animation de Disney raconte l'histoire d'un lion nommé Simba?",
+        "choices": [
+            "Le Roi Lion",
+            "La Belle et la Bête",
+            "Aladdin",
+            "Mulan"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film suit les aventures de super-héros appelés les Avengers?",
+        "choices": [
+            "Avengers: Endgame",
+            "Guardians of the Galaxy",
+            "Thor: Ragnarok",
+            "Doctor Strange"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel est le nom du personnage joué par Matt Smith dans 'The Crown'?",
+        "choices": [
+            "Prince Philip",
+            "Prince Charles",
+            "Winston Churchill",
+            "King George VI"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film de science-fiction a été réalisé par Ridley Scott et met en scène un extraterrestre dangereux?",
+        "choices": [
+            "Alien",
+            "Blade Runner",
+            "Prometheus",
+            "The Martian"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel film de 1994 raconte l'histoire d'un homme qui vit sa vie de manière non linéaire?",
+        "choices": [
+            "Pulp Fiction",
+            "Forrest Gump",
+            "The Shawshank Redemption",
+            "Natural Born Killers"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    },
+    {
+        "text": "Quel est le nom du personnage joué par Scarlett Johansson dans 'Lost in Translation'?",
+        "choices": [
+            "Charlotte",
+            "Samantha",
+            "Sophie",
+            "Olivia"
+        ],
+        "correctAnswer": 0,
+        "type": "Série/Films"
+    }
+]

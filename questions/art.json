@@ -1,0 +1,585 @@
+[
+    {
+        "text": "Qui a peint la 'Joconde'?",
+        "choices": [
+            "Vincent van Gogh",
+            "Claude Monet",
+            "Léonard de Vinci",
+            "Pablo Picasso"
+        ],
+        "correctAnswer": 2,
+        "type": "Art"
+    },
+    {
+        "text": "Quel est le courant artistique de Salvador Dalí?",
+        "choices": [
+            "Cubisme",
+            "Surréalisme",
+            "Impressionnisme",
+            "Expressionnisme"
+        ],
+        "correctAnswer": 1,
+        "type": "Art"
+    },
+    {
+        "text": "Quel peintre est célèbre pour sa série de tableaux sur les nénuphars?",
+        "choices": [
+            "Claude Monet",
+            "Vincent van Gogh",
+            "Paul Cézanne",
+            "Gustav Klimt"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quelle œuvre de Michel-Ange se trouve sur le plafond de la Chapelle Sixtine?",
+        "choices": [
+            "Le Jugement Dernier",
+            "La Création d'Adam",
+            "Le David",
+            "La Pietà"
+        ],
+        "correctAnswer": 1,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste néerlandais est connu pour ses tableaux de tournesols?",
+        "choices": [
+            "Vincent van Gogh",
+            "Rembrandt",
+            "Johannes Vermeer",
+            "Hieronymus Bosch"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel mouvement artistique est associé à Pablo Picasso?",
+        "choices": [
+            "Cubisme",
+            "Impressionnisme",
+            "Surréalisme",
+            "Renaissance"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est connu pour ses sculptures en bronze de danseurs et de chevaux?",
+        "choices": [
+            "Auguste Rodin",
+            "Gustav Klimt",
+            "Henry Moore",
+            "Alberto Giacometti"
+        ],
+        "correctAnswer": 2,
+        "type": "Art"
+    },
+    {
+        "text": "Quel peintre est célèbre pour sa toile intitulée 'La Nuit étoilée'?",
+        "choices": [
+            "Vincent van Gogh",
+            "Claude Monet",
+            "Edvard Munch",
+            "Henri Matisse"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quelle œuvre est signée par Léonard de Vinci et représente une femme avec un sourire mystérieux?",
+        "choices": [
+            "La Joconde",
+            "Le Dernier Souper",
+            "L'Annonciation",
+            "Le Baptême du Christ"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel peintre est connu pour sa technique du dripping dans ses œuvres?",
+        "choices": [
+            "Jackson Pollock",
+            "Mark Rothko",
+            "Willem de Kooning",
+            "Andy Warhol"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste a peint 'Les Demoiselles d'Avignon' en 1907?",
+        "choices": [
+            "Pablo Picasso",
+            "Georges Braque",
+            "Henri Matisse",
+            "Marc Chagall"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel peintre a réalisé la célèbre œuvre 'La Naissance de Vénus'?",
+        "choices": [
+            "Sandro Botticelli",
+            "Raphaël",
+            "Titien",
+            "Leonard de Vinci"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel mouvement artistique est connu pour ses représentations de la lumière et de la couleur, souvent en plein air?",
+        "choices": [
+            "Impressionnisme",
+            "Expressionnisme",
+            "Surréalisme",
+            "Renaissance"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quelle œuvre d'Edvard Munch représente une figure criant sur un pont?",
+        "choices": [
+            "Le Cri",
+            "La Madone",
+            "Les Apôtres",
+            "La Tempête"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est associé au mouvement Pop Art?",
+        "choices": [
+            "Andy Warhol",
+            "Salvador Dalí",
+            "Jackson Pollock",
+            "Claude Monet"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est connu pour ses portraits de Marilyn Monroe et de Campbell's Soup Cans?",
+        "choices": [
+            "Andy Warhol",
+            "Roy Lichtenstein",
+            "Robert Rauschenberg",
+            "Jasper Johns"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est célèbre pour ses sculptures de 'Penseur' et 'Le Baiser'?",
+        "choices": [
+            "Auguste Rodin",
+            "Gustav Klimt",
+            "Henri Moore",
+            "Alberto Giacometti"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quelle artiste est connue pour ses peintures de fleurs géantes et de paysages américains?",
+        "choices": [
+            "Georgia O'Keeffe",
+            "Frida Kahlo",
+            "Mary Cassatt",
+            "Joan Mitchell"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est célèbre pour ses fresques sur les murs de la Chapelle Sixtine?",
+        "choices": [
+            "Michel-Ange",
+            "Raphaël",
+            "Botticelli",
+            "Leonard de Vinci"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est associé au mouvement surréaliste et est connu pour ses montres fondantes?",
+        "choices": [
+            "Salvador Dalí",
+            "René Magritte",
+            "Max Ernst",
+            "Joan Miró"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel peintre a réalisé 'Le Jardin des délices'?",
+        "choices": [
+            "Hieronymus Bosch",
+            "Rembrandt",
+            "Caravage",
+            "El Greco"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est célèbre pour ses portraits de la Reine Elizabeth II?",
+        "choices": [
+            "Andy Warhol",
+            "David Hockney",
+            "Lucian Freud",
+            "Francis Bacon"
+        ],
+        "correctAnswer": 1,
+        "type": "Art"
+    },
+    {
+        "text": "Quel mouvement artistique est caractérisé par l'usage de formes géométriques et l'absence de perspective traditionnelle?",
+        "choices": [
+            "Cubisme",
+            "Fauvisme",
+            "Baroque",
+            "Renaissance"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quelle est la technique utilisée par les artistes impressionnistes pour capturer les effets de la lumière?",
+        "choices": [
+            "Peinture en plein air",
+            "Peinture à l'huile sur toile",
+            "Aquarelle",
+            "Sculpture en bronze"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est connu pour ses collages et ses œuvres inspirées de la culture populaire?",
+        "choices": [
+            "Robert Rauschenberg",
+            "Jackson Pollock",
+            "Willem de Kooning",
+            "Mark Rothko"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste a créé 'La Création d'Adam'?",
+        "choices": [
+            "Michel-Ange",
+            "Raphaël",
+            "Leonard de Vinci",
+            "Titien"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est célèbre pour ses œuvres avec des formes abstraites et des couleurs vives?",
+        "choices": [
+            "Wassily Kandinsky",
+            "Piet Mondrian",
+            "Paul Klee",
+            "Kazimir Malevitch"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est connu pour ses œuvres représentant des scènes de la vie quotidienne à Paris au début du XXe siècle?",
+        "choices": [
+            "Henri Toulouse-Lautrec",
+            "Édouard Manet",
+            "Camille Pissarro",
+            "Alfred Sisley"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel peintre est connu pour ses œuvres dans le style de l'Art Nouveau, souvent avec des motifs floraux?",
+        "choices": [
+            "Gustav Klimt",
+            "Egon Schiele",
+            "Egon Schiele",
+            "Henri Toulouse-Lautrec"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel peintre est célèbre pour ses représentations de la vie quotidienne et des femmes dans des scènes intimes?",
+        "choices": [
+            "Mary Cassatt",
+            "Berthe Morisot",
+            "Gustav Klimt",
+            "Élisabeth Louise Vigée Le Brun"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est connu pour ses tableaux de scènes de la vie nocturne à Paris?",
+        "choices": [
+            "Henri Toulouse-Lautrec",
+            "Claude Monet",
+            "Édouard Manet",
+            "Camille Pissarro"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel mouvement artistique est caractérisé par l'utilisation d'images et de techniques inspirées par la culture populaire et la publicité?",
+        "choices": [
+            "Pop Art",
+            "Impressionnisme",
+            "Surréalisme",
+            "Expressionnisme"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est connu pour ses peintures de paysages abstraits influencées par les éléments naturels?",
+        "choices": [
+            "Georgia O'Keeffe",
+            "Paul Klee",
+            "Mark Rothko",
+            "Wassily Kandinsky"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est associé au mouvement de l'Expressionnisme abstrait?",
+        "choices": [
+            "Jackson Pollock",
+            "Willem de Kooning",
+            "Mark Rothko",
+            "Arshile Gorky"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est connu pour ses portraits de personnages historiques et religieux dans un style dramatique et théâtral?",
+        "choices": [
+            "Caravage",
+            "Rembrandt",
+            "Gustav Klimt",
+            "Titien"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est connu pour ses représentations abstraites et ses œuvres inspirées par le jazz et la musique?",
+        "choices": [
+            "Wassily Kandinsky",
+            "Paul Klee",
+            "Mark Rothko",
+            "Piet Mondrian"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est célèbre pour ses peintures représentant des paysages urbains et des scènes de la vie moderne?",
+        "choices": [
+            "Edward Hopper",
+            "Jackson Pollock",
+            "Georgia O'Keeffe",
+            "Henri Matisse"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste a peint 'Les Ménines', une œuvre complexe qui joue avec la perspective et la représentation?",
+        "choices": [
+            "Diego Velázquez",
+            "Francisco Goya",
+            "El Greco",
+            "Murillo"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est célèbre pour ses grandes compositions colorées et ses formes géométriques en mosaïque?",
+        "choices": [
+            "Mosaic of the artist who worked with geometric shapes",
+            "Antoni Gaudí",
+            "Pablo Picasso",
+            "Henri Matisse"
+        ],
+        "correctAnswer": 1,
+        "type": "Art"
+    },
+    {
+        "text": "Quel peintre est connu pour ses œuvres représentant des paysages marins et des vues du port?",
+        "choices": [
+            "Claude Monet",
+            "Joseph Mallord William Turner",
+            "Camille Pissarro",
+            "Édouard Manet"
+        ],
+        "correctAnswer": 1,
+        "type": "Art"
+    },
+    {
+        "text": "Quel peintre a réalisé 'Le Mariage de la Vierge' en 1504?",
+        "choices": [
+            "Raphaël",
+            "Leonard de Vinci",
+            "Michel-Ange",
+            "Titien"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel mouvement artistique est associé aux artistes qui utilisent des formes abstraites et des couleurs vives pour exprimer des émotions?",
+        "choices": [
+            "Expressionnisme",
+            "Impressionnisme",
+            "Surréalisme",
+            "Cubisme"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est célèbre pour ses peintures de femmes aux traits stylisés et ornementaux?",
+        "choices": [
+            "Gustav Klimt",
+            "Egon Schiele",
+            "Franz Marc",
+            "Kurt Schwitters"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel peintre est connu pour ses représentations colorées et stylisées de la vie quotidienne dans le sud des États-Unis?",
+        "choices": [
+            "Childe Hassam",
+            "Edward Hopper",
+            "Georgia O'Keeffe",
+            "John Singer Sargent"
+        ],
+        "correctAnswer": 2,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste a réalisé la série 'Les Nympheas'?",
+        "choices": [
+            "Claude Monet",
+            "Vincent van Gogh",
+            "Édouard Manet",
+            "Paul Cézanne"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel peintre est célèbre pour ses tableaux sur la vie des travailleurs dans des styles réalistes et sociaux?",
+        "choices": [
+            "Diego Rivera",
+            "David Alfaro Siqueiros",
+            "José Clemente Orozco",
+            "Frida Kahlo"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est associé au mouvement néo-impressionniste et est connu pour ses œuvres en pointillisme?",
+        "choices": [
+            "Georges Seurat",
+            "Paul Signac",
+            "Henri Toulouse-Lautrec",
+            "Vincent van Gogh"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste a créé le célèbre 'Portrait de la Belle Ferronnière'?",
+        "choices": [
+            "Leonard de Vinci",
+            "Raphaël",
+            "Titien",
+            "Michel-Ange"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel peintre est connu pour ses œuvres sur le thème des jardins et des paysages?",
+        "choices": [
+            "Claude Monet",
+            "Paul Cézanne",
+            "Henri Rousseau",
+            "Édouard Manet"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste est connu pour ses peintures d'animaux et de paysages dans le style du réalisme animalier?",
+        "choices": [
+            "Rosa Bonheur",
+            "Jean-Léon Gérôme",
+            "Edouard Detaille",
+            "Alfred de Dreux"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel peintre est connu pour ses portraits de personnalités célèbres et ses œuvres critiques de la société?",
+        "choices": [
+            "Francis Bacon",
+            "David Hockney",
+            "Lucian Freud",
+            "Egon Schiele"
+        ],
+        "correctAnswer": 2,
+        "type": "Art"
+    },
+    {
+        "text": "Quel peintre est célèbre pour ses représentations de la campagne anglaise et des paysages pittoresques?",
+        "choices": [
+            "John Constable",
+            "Joseph Mallord William Turner",
+            "George Stubbs",
+            "William Blake"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    },
+    {
+        "text": "Quel artiste a réalisé 'Les Amants' en 1928?",
+        "choices": [
+            "René Magritte",
+            "Salvador Dalí",
+            "Max Ernst",
+            "Joan Miró"
+        ],
+        "correctAnswer": 0,
+        "type": "Art"
+    }
+]

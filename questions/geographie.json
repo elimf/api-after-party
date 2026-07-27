@@ -1,0 +1,475 @@
+[
+    {
+        "text": "Quel est le plus grand océan du monde?",
+        "choices": [
+            "Océan Atlantique",
+            "Océan Indien",
+            "Océan Arctique",
+            "Océan Pacifique"
+        ],
+        "correctAnswer": 3,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le plus grand désert du monde?",
+        "choices": [
+            "Désert du Sahara",
+            "Désert de Gobi",
+            "Désert de Kalahari",
+            "Antarctique"
+        ],
+        "correctAnswer": 3,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le plus grand pays du monde en superficie?",
+        "choices": [
+            "Canada",
+            "Chine",
+            "Russie",
+            "États-Unis"
+        ],
+        "correctAnswer": 2,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale de la Norvège?",
+        "choices": [
+            "Oslo",
+            "Stockholm",
+            "Helsinki",
+            "Copenhague"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le plus long fleuve d'Afrique?",
+        "choices": [
+            "Nil",
+            "Congo",
+            "Zambèze",
+            "Orange"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel pays est composé de plus de 17 000 îles?",
+        "choices": [
+            "Indonésie",
+            "Philippines",
+            "Japon",
+            "Grèce"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale du Canada?",
+        "choices": [
+            "Toronto",
+            "Vancouver",
+            "Montréal",
+            "Ottawa"
+        ],
+        "correctAnswer": 3,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le pays le plus densément peuplé du monde?",
+        "choices": [
+            "Monaco",
+            "Singapour",
+            "Bangladesh",
+            "Inde"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le plus grand lac d'eau douce du monde?",
+        "choices": [
+            "Lac Baïkal",
+            "Lac Supérieur",
+            "Lac Victoria",
+            "Lac Michigan"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale de l'Australie?",
+        "choices": [
+            "Sydney",
+            "Melbourne",
+            "Brisbane",
+            "Canberra"
+        ],
+        "correctAnswer": 3,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel pays est surnommé 'Le pays du Soleil Levant'?",
+        "choices": [
+            "Japon",
+            "Chine",
+            "Corée du Sud",
+            "Thaïlande"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le nom de la chaîne de montagnes qui sépare l'Europe de l'Asie?",
+        "choices": [
+            "Les Alpes",
+            "Les Pyrénées",
+            "Les Carpates",
+            "L'Oural"
+        ],
+        "correctAnswer": 3,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le plus grand archipel au monde?",
+        "choices": [
+            "Indonésie",
+            "Philippines",
+            "Japon",
+            "Grèce"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le pays le plus petit d'Afrique?",
+        "choices": [
+            "Lesotho",
+            "Gabon",
+            "Burundi",
+            "Djibouti"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le plus grand volcan actif du monde?",
+        "choices": [
+            "Mont Kilimandjaro",
+            "Mont Fuji",
+            "Mauna Loa",
+            "Mont Etna"
+        ],
+        "correctAnswer": 2,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la plus grande île de la Méditerranée?",
+        "choices": [
+            "Sicile",
+            "Sardaigne",
+            "Chypre",
+            "Corse"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le nom de la rivière qui traverse Paris?",
+        "choices": [
+            "Seine",
+            "Loire",
+            "Rhin",
+            "Garonne"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel pays possède l'île de Groenland?",
+        "choices": [
+            "Canada",
+            "Danemark",
+            "Norvège",
+            "Suède"
+        ],
+        "correctAnswer": 1,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale du Brésil?",
+        "choices": [
+            "São Paulo",
+            "Rio de Janeiro",
+            "Brasília",
+            "Salvador"
+        ],
+        "correctAnswer": 2,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le plus grand pays d'Amérique du Sud?",
+        "choices": [
+            "Brésil",
+            "Argentine",
+            "Colombie",
+            "Venezuela"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le nom de la plus grande île de l'océan Atlantique?",
+        "choices": [
+            "Groenland",
+            "Islande",
+            "Madagascar",
+            "Cuba"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le nom du pays situé entre la France et l'Italie?",
+        "choices": [
+            "Suisse",
+            "Monaco",
+            "Andorre",
+            "Luxembourg"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la plus grande ville d'Inde?",
+        "choices": [
+            "Delhi",
+            "Mumbai",
+            "Bangalore",
+            "Kolkata"
+        ],
+        "correctAnswer": 1,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la plus grande île des Philippines?",
+        "choices": [
+            "Luzon",
+            "Mindanao",
+            "Visayas",
+            "Palawan"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle chaîne de montagnes est située en Amérique du Sud?",
+        "choices": [
+            "Andes",
+            "Appalaches",
+            "Rocky Mountains",
+            "Alpes"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le nom du pays situé au sud de l'Espagne?",
+        "choices": [
+            "Maroc",
+            "Algérie",
+            "Portugal",
+            "Tunisie"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la plus grande mer intérieure du monde?",
+        "choices": [
+            "Mer Caspienne",
+            "Mer Méditerranée",
+            "Mer Noire",
+            "Mer d'Aral"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale du Suriname?",
+        "choices": [
+            "Paramaribo",
+            "Cayenne",
+            "Georgetown",
+            "Port-au-Prince"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale du Vietnam?",
+        "choices": [
+            "Hanoï",
+            "Ho Chi Minh-Ville",
+            "Da Nang",
+            "Hué"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le plus grand pays d'Amérique du Nord?",
+        "choices": [
+            "États-Unis",
+            "Canada",
+            "Mexique",
+            "Groenland"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quel est le plus grand océan de la Terre?",
+        "choices": [
+            "Océan Atlantique",
+            "Océan Indien",
+            "Océan Arctique",
+            "Océan Pacifique"
+        ],
+        "correctAnswer": 3,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale de l'Australie?",
+        "choices": [
+            "Sydney",
+            "Melbourne",
+            "Canberra",
+            "Brisbane"
+        ],
+        "correctAnswer": 2,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale de l'Espagne?",
+        "choices": [
+            "Lisbonne",
+            "Madrid",
+            "Barcelone",
+            "Rome"
+        ],
+        "correctAnswer": 1,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale de l'Italie?",
+        "choices": [
+            "Venise",
+            "Rome",
+            "Milan",
+            "Florence"
+        ],
+        "correctAnswer": 1,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale de la France?",
+        "choices": [
+            "Paris",
+            "Aubervilliers",
+            "Berlin",
+            "Madrid"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale de l'Allemagne?",
+        "choices": [
+            "Berlin",
+            "Munich",
+            "Hambourg",
+            "Francfort"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale de la Russie?",
+        "choices": [
+            "Moscou",
+            "Saint-Pétersbourg",
+            "Kazan",
+            "Sotchi"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale de la Chine?",
+        "choices": [
+            "Pékin",
+            "Shanghai",
+            "Hong Kong",
+            "Canton"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale du Japon?",
+        "choices": [
+            "Tokyo",
+            "Osaka",
+            "Kyoto",
+            "Hiroshima"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale de l'Inde?",
+        "choices": [
+            "New Delhi",
+            "Mumbai",
+            "Bangalore",
+            "Kolkata"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale de l'Argentine?",
+        "choices": [
+            "Buenos Aires",
+            "Córdoba",
+            "Rosario",
+            "Mendoza"
+        ],
+        "correctAnswer": 0,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale du Brésil?",
+        "choices": [
+            "São Paulo",
+            "Rio de Janeiro",
+            "Brasília",
+            "Salvador"
+        ],
+        "correctAnswer": 2,
+        "type": "Géographie"
+    },
+    {
+        "text": "Quelle est la capitale de l'Afrique du Sud?",
+        "choices": [
+            "Le Cap",
+            "Johannesburg",
+            "Pretoria",
+            "Durban"
+        ],
+        "correctAnswer": 2,
+        "type": "Géographie"
+    }
+]

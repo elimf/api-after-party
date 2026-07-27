@@ -1,0 +1,442 @@
+[
+    {
+        "text": "Quel manga suit les aventures d'un jeune ninja nommé Naruto Uzumaki?",
+        "choices": [
+            "Naruto",
+            "Dragon Ball",
+            "One Piece",
+            "Bleach"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga de Hiro Mashima met en scène des mages et des guildes?",
+        "choices": [
+            "Fairy Tail",
+            "One Piece",
+            "Naruto",
+            "Bleach"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga raconte l'histoire d'un jeune garçon qui devient le Roi des Pirates?",
+        "choices": [
+            "One Piece",
+            "Naruto",
+            "Dragon Ball",
+            "Attack on Titan"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel est le nom du créateur du manga 'Death Note'?",
+        "choices": [
+            "Tsugumi Ohba",
+            "Eiichiro Oda",
+            "Akira Toriyama",
+            "Hajime Isayama"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga raconte les aventures de Goku, un guerrier Saiyan?",
+        "choices": [
+            "Dragon Ball",
+            "Naruto",
+            "One Piece",
+            "Bleach"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga est centré autour d'une organisation secrète nommée 'Akatsuki'?",
+        "choices": [
+            "Naruto",
+            "Fairy Tail",
+            "Bleach",
+            "One Piece"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga de Yoshihiro Togashi suit les aventures de Gon Freecss?",
+        "choices": [
+            "Hunter x Hunter",
+            "One Piece",
+            "Naruto",
+            "Dragon Ball"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel est le titre du manga qui se déroule dans un univers où l'humanité est attaquée par des titans géants?",
+        "choices": [
+            "Attack on Titan",
+            "Fullmetal Alchemist",
+            "Bleach",
+            "My Hero Academia"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga suit les aventures d'un jeune homme avec un bras mécanique?",
+        "choices": [
+            "Fullmetal Alchemist",
+            "Naruto",
+            "One Piece",
+            "Attack on Titan"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga de Tite Kubo met en scène des Shinigamis et des âmes perdues?",
+        "choices": [
+            "Bleach",
+            "Naruto",
+            "Fairy Tail",
+            "One Piece"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga suit les aventures d'une équipe de héros dotés de pouvoirs spéciaux appelés 'Quirks'?",
+        "choices": [
+            "My Hero Academia",
+            "Naruto",
+            "Dragon Ball",
+            "One Piece"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga est connu pour ses combats de robots géants appelés 'Mechas'?",
+        "choices": [
+            "Gurren Lagann",
+            "Neon Genesis Evangelion",
+            "Fullmetal Alchemist",
+            "Bleach"
+        ],
+        "correctAnswer": 1,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga raconte les aventures d'un jeune alchimiste nommé Edward Elric?",
+        "choices": [
+            "Fullmetal Alchemist",
+            "One Piece",
+            "Naruto",
+            "Dragon Ball"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel est le nom du manga où un jeune garçon, Luffy, recherche le trésor ultime, le One Piece?",
+        "choices": [
+            "One Piece",
+            "Naruto",
+            "Fairy Tail",
+            "Attack on Titan"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga met en scène un groupe de pirates avec des pouvoirs surnaturels?",
+        "choices": [
+            "One Piece",
+            "Dragon Ball",
+            "Naruto",
+            "Bleach"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga suit les aventures de Edward et Alphonse Elric dans leur quête pour retrouver leur corps?",
+        "choices": [
+            "Fullmetal Alchemist",
+            "Naruto",
+            "One Piece",
+            "Attack on Titan"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel est le nom du manga qui se déroule dans une école pour héroïnes et suit une jeune fille nommée Izuku Midoriya?",
+        "choices": [
+            "My Hero Academia",
+            "Naruto",
+            "One Piece",
+            "Fairy Tail"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga se déroule dans un monde où les gens peuvent contrôler les éléments avec des techniques spéciales?",
+        "choices": [
+            "Avatar: The Last Airbender",
+            "Fullmetal Alchemist",
+            "One Piece",
+            "Bleach"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel est le nom du manga qui suit les aventures d'un détective en herbe, Conan Edogawa?",
+        "choices": [
+            "Detective Conan",
+            "Death Note",
+            "One Piece",
+            "Naruto"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga met en scène un jeune guerrier qui se bat pour protéger la Terre des envahisseurs extraterrestres?",
+        "choices": [
+            "Dragon Ball",
+            "Naruto",
+            "Bleach",
+            "One Piece"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga raconte l'histoire d'une famille maudite qui se transforme en animaux du zodiaque chinois?",
+        "choices": [
+            "Fruits Basket",
+            "Ouran High School Host Club",
+            "Nana",
+            "Attack on Titan"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga est centré autour d'un jeu de survie mortel appelé 'King's Game'?",
+        "choices": [
+            "Ousama Game",
+            "Death Note",
+            "Sword Art Online",
+            "Attack on Titan"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Dans quel manga un jeune homme nommé Light Yagami trouve un cahier qui peut tuer des gens?",
+        "choices": [
+            "Death Note",
+            "Attack on Titan",
+            "Fullmetal Alchemist",
+            "Naruto"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga raconte l'histoire d'une école où les étudiants sont formés pour être des assassins?",
+        "choices": [
+            "Assassination Classroom",
+            "Naruto",
+            "Attack on Titan",
+            "Death Note"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel est le manga qui raconte l'histoire d'une jeune fille qui tombe accidentellement dans un puits et se retrouve à l'époque Sengoku?",
+        "choices": [
+            "Inuyasha",
+            "Naruto",
+            "One Piece",
+            "Bleach"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga met en scène un homme qui tue des esprits maléfiques à l'aide d'une épée magique?",
+        "choices": [
+            "Bleach",
+            "Naruto",
+            "Fullmetal Alchemist",
+            "Dragon Ball"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga est centré sur un lycéen qui devient l'hôte d'une entité extraterrestre appelée Parasite?",
+        "choices": [
+            "Parasyte",
+            "Naruto",
+            "Death Note",
+            "One Piece"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Dans quel manga des étudiants sont piégés dans un jeu mortel où ils doivent s'entre-tuer pour survivre?",
+        "choices": [
+            "Danganronpa",
+            "Attack on Titan",
+            "Sword Art Online",
+            "One Piece"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga est centré sur des lycéens qui se battent contre des créatures appelées 'Ghoul'?",
+        "choices": [
+            "Tokyo Ghoul",
+            "Attack on Titan",
+            "Naruto",
+            "Death Note"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga suit les aventures d'un jeune homme qui peut exorciser les esprits maléfiques avec l'aide d'une créature surnaturelle appelée Yato?",
+        "choices": [
+            "Noragami",
+            "Bleach",
+            "Naruto",
+            "One Piece"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga raconte l'histoire d'un jeune garçon nommé Tanjiro qui devient un tueur de démons pour venger sa famille?",
+        "choices": [
+            "Demon Slayer",
+            "Attack on Titan",
+            "Naruto",
+            "Bleach"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel est le nom du manga qui se déroule dans un univers steampunk où les humains combattent des créatures appelées 'Kabane'?",
+        "choices": [
+            "Kabaneri of the Iron Fortress",
+            "Attack on Titan",
+            "Fullmetal Alchemist",
+            "Bleach"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga raconte l'histoire d'un monde où les hommes peuvent créer des armes vivantes appelées 'Innocence' pour combattre des créatures maléfiques?",
+        "choices": [
+            "D.Gray-man",
+            "Naruto",
+            "Bleach",
+            "One Piece"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga suit les aventures d'un jeune garçon qui se retrouve dans un monde de rêves et de cauchemars après avoir été kidnappé?",
+        "choices": [
+            "The Promised Neverland",
+            "Naruto",
+            "Death Note",
+            "Bleach"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga raconte l'histoire d'un jeune garçon qui découvre qu'il est le descendant d'une lignée royale et doit protéger son royaume des forces du mal?",
+        "choices": [
+            "Seven Deadly Sins",
+            "Naruto",
+            "One Piece",
+            "Bleach"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga se déroule dans un monde où la nourriture est extrêmement précieuse et les chefs sont des guerriers?",
+        "choices": [
+            "Toriko",
+            "One Piece",
+            "Naruto",
+            "Fairy Tail"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga raconte l'histoire d'un détective privé qui résout des affaires surnaturelles avec l'aide de son assistant démoniaque?",
+        "choices": [
+            "Black Butler",
+            "Naruto",
+            "One Piece",
+            "Death Note"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga raconte l'histoire d'un jeune garçon qui peut contrôler des créatures appelées 'Stand' dans un combat pour protéger sa famille?",
+        "choices": [
+            "JoJo's Bizarre Adventure",
+            "Naruto",
+            "Bleach",
+            "Attack on Titan"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga suit les aventures d'un groupe d'amis qui participent à des combats de gladiateurs dans une arène post-apocalyptique?",
+        "choices": [
+            "Kengan Ashura",
+            "One Piece",
+            "Naruto",
+            "Attack on Titan"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    },
+    {
+        "text": "Quel manga raconte l'histoire d'un jeune garçon qui est en réalité une créature divine réincarnée sous forme humaine?",
+        "choices": [
+            "Noragami",
+            "Naruto",
+            "Bleach",
+            "One Piece"
+        ],
+        "correctAnswer": 0,
+        "type": "Manga"
+    }
+]

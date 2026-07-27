@@ -1,0 +1,420 @@
+[
+    {
+        "text": "Quel pays a remporté la Coupe du Monde de la FIFA en 2018?",
+        "choices": [
+            "France",
+            "Croatie",
+            "Allemagne",
+            "Brésil"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel sport est joué sur une table avec des raquettes et une balle en plastique?",
+        "choices": [
+            "Tennis de table",
+            "Badminton",
+            "Tennis",
+            "Squash"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel joueur de tennis a remporté le plus grand nombre de titres du Grand Chelem?",
+        "choices": [
+            "Margaret Court",
+            "Serena Williams",
+            "Roger Federer",
+            "Rafael Nadal"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel pays a organisé les Jeux Olympiques d'été de 2020?",
+        "choices": [
+            "Japon",
+            "Brésil",
+            "Chine",
+            "France"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel joueur de football est surnommé 'La Pulga'?",
+        "choices": [
+            "Lionel Messi",
+            "Cristiano Ronaldo",
+            "Neymar",
+            "Kylian Mbappé"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quelle équipe a remporté la Ligue des Champions de l'UEFA en 2022?",
+        "choices": [
+            "Real Madrid",
+            "Liverpool",
+            "Bayern Munich",
+            "Paris Saint-Germain"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel club a gagné le plus grand nombre de titres de la Premier League anglaise?",
+        "choices": [
+            "Manchester United",
+            "Liverpool",
+            "Chelsea",
+            "Arsenal"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel club a remporte le plus grand nombre de Ligue des Champions de l'UEFA?",
+        "choices": [
+            "Real Madrid",
+            "FC Barcelone",
+            "Bayern Munich",
+            "Liverpool"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Qui est le transfert le plus cher de l'histoire du football?",
+        "choices": [
+            "Kylian Mbappé",
+            "Cristiano Ronaldo",
+            "Neymar",
+            "Lionel Messi"
+        ],
+        "correctAnswer": 2,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel joueur de basketball a été surnommé 'Air Jordan'?",
+        "choices": [
+            "Michael Jordan",
+            "LeBron James",
+            "Kobe Bryant",
+            "Larry Bird"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel est le nombre de joueurs dans une équipe de football sur le terrain?",
+        "choices": [
+            "11",
+            "7",
+            "5",
+            "9"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel pays a remporté le plus grand nombre de titres de la Coupe du Monde de Rugby?",
+        "choices": [
+            "Nouvelle-Zélande",
+            "Afrique du Sud",
+            "Australie",
+            "Angleterre"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel athlète a remporté 8 médailles d'or lors des Jeux Olympiques d'été de 2008?",
+        "choices": [
+            "Michael Phelps",
+            "Usain Bolt",
+            "Carl Lewis",
+            "Mark Spitz"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel athlète est considéré comme le 'Roi du Tennis'?",
+        "choices": [
+            "Roger Federer",
+            "Rafael Nadal",
+            "Novak Djokovic",
+            "Pete Sampras"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel est le sport national du Japon?",
+        "choices": [
+            "Sumo",
+            "Judo",
+            "Karate",
+            "Kendo"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel athlète est considéré comme l'homme le plus rapide du monde?",
+        "choices": [
+            "Usain Bolt",
+            "Carl Lewis",
+            "Jesse Owens",
+            "Michael Johnson"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel joueur a remporté le plus grand nombre de titres de la Premier League anglaise?",
+        "choices": [
+            "Ryan Giggs",
+            "Steven Gerrard",
+            "Frank Lampard",
+            "Paul Scholes"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quelle équipe de baseball a remporté la Série Mondiale en 2021?",
+        "choices": [
+            "Atlanta Braves",
+            "Los Angeles Dodgers",
+            "Tampa Bay Rays",
+            "Houston Astros"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel joueur de football est connu pour ses dribbles appelés 'la danse du soleil'?",
+        "choices": [
+            "Ronaldinho",
+            "Pelé",
+            "Diego Maradona",
+            "Zinedine Zidane"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel sport est souvent joué sur un terrain de glace avec des balais et une pierre?",
+        "choices": [
+            "Curling",
+            "Hockey sur glace",
+            "Patinage artistique",
+            "Bobsleigh"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel joueur de tennis a remporté le plus de titres à Roland Garros?",
+        "choices": [
+            "Rafael Nadal",
+            "Roger Federer",
+            "Novak Djokovic",
+            "Björn Borg"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel est le sport national des États-Unis?",
+        "choices": [
+            "Baseball",
+            "Basketball",
+            "Football américain",
+            "Hockey sur glace"
+        ],
+        "correctAnswer": 2,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel est le nom de la compétition annuelle de tennis qui se déroule à Wimbledon?",
+        "choices": [
+            "The Championships",
+            "US Open",
+            "Australian Open",
+            "Roland Garros"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel joueur de football a marqué le plus grand nombre de buts en une seule saison de La Liga?",
+        "choices": [
+            "Lionel Messi",
+            "Cristiano Ronaldo",
+            "Raúl",
+            "Zinedine Zidane"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quelle équipe a remporté les Jeux Olympiques d'été en 2016?",
+        "choices": [
+            "États-Unis",
+            "Chine",
+            "Royaume-Uni",
+            "Japon"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel joueur de baseball a établi le record du plus grand nombre de coups de circuit en une saison?",
+        "choices": [
+            "Barry Bonds",
+            "Hank Aaron",
+            "Babe Ruth",
+            "Sammy Sosa"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel est le nom du tournoi de tennis joué sur surface en terre battue?",
+        "choices": [
+            "Roland Garros",
+            "Wimbledon",
+            "US Open",
+            "Australian Open"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel joueur de football a remporté le plus grand nombre de titres de la Ligue des Champions de l'UEFA?",
+        "choices": [
+            "Cristiano Ronaldo",
+            "Lionel Messi",
+            "Paolo Maldini",
+            "Clarence Seedorf"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quelle équipe de football a remporté la Ligue des Champions en 2020?",
+        "choices": [
+            "Bayern Munich",
+            "Manchester City",
+            "Liverpool",
+            "Real Madrid"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel joueur de football est connu pour ses célébrations avec le 'dab'?",
+        "choices": [
+            "Paul Pogba",
+            "Kylian Mbappé",
+            "Cristiano Ronaldo",
+            "Lionel Messi"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel sport est pratiqué lors des Jeux Olympiques d'été avec une épreuve appelée 'l'heptathlon'?",
+        "choices": [
+            "Athlétisme",
+            "Natation",
+            "Gymnastique",
+            "Boxe"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel joueur de football a remporté le plus grand nombre de trophées de la Coupe du Monde de la FIFA?",
+        "choices": [
+            "Pelé",
+            "Diego Maradona",
+            "Zinedine Zidane",
+            "Cristiano Ronaldo"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel est le nom du tournoi de golf le plus prestigieux au monde?",
+        "choices": [
+            "The Masters",
+            "The Open Championship",
+            "The Players Championship",
+            "The Ryder Cup"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel joueur de tennis a remporté le plus grand nombre de titres du Grand Chelem en simple et en double?",
+        "choices": [
+            "Martina Navratilova",
+            "Serena Williams",
+            "Steffi Graf",
+            "Margaret Court"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel est le nom du stade de football le plus grand du monde?",
+        "choices": [
+            "Camp Nou",
+            "Wembley Stadium",
+            "Maracanã",
+            "Rungrado 1st of May Stadium"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel joueur de basketball a remporté le plus grand nombre de titres de la NBA?",
+        "choices": [
+            "Bill Russell",
+            "Michael Jordan",
+            "Kareem Abdul-Jabbar",
+            "Magic Johnson"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel est le nom du tournoi de tennis joué sur surface en gazon?",
+        "choices": [
+            "Wimbledon",
+            "Roland Garros",
+            "US Open",
+            "Australian Open"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    },
+    {
+        "text": "Quel joueur de football a remporté le plus grand nombre de Ballons d'Or?",
+        "choices": [
+            "Lionel Messi",
+            "Cristiano Ronaldo",
+            "Johan Cruyff",
+            "Michel Platini"
+        ],
+        "correctAnswer": 0,
+        "type": "Sport"
+    }
+]

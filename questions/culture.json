@@ -1,0 +1,321 @@
+[
+    {
+        "text": "Quelle est la monnaie du Japon?",
+        "choices": [
+            "Yen",
+            "Dollar",
+            "Euro",
+            "Livre"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le plus grand pays du monde?",
+        "choices": [
+            "Canada",
+            "Chine",
+            "Russie",
+            "États-Unis"
+        ],
+        "correctAnswer": 2,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quelle est la monnaie de la Russie?",
+        "choices": [
+            "Rouble",
+            "Dollar",
+            "Euro",
+            "Livre"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Qui a peint 'La Joconde'?",
+        "choices": [
+            "Vincent van Gogh",
+            "Claude Monet",
+            "Leonard de Vinci",
+            "Pablo Picasso"
+        ],
+        "correctAnswer": 2,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est l'auteur de 'Les Misérables'?",
+        "choices": [
+            "Émile Zola",
+            "Victor Hugo",
+            "Marcel Proust",
+            "Gustave Flaubert"
+        ],
+        "correctAnswer": 1,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le plus grand océan du monde?",
+        "choices": [
+            "Océan Atlantique",
+            "Océan Indien",
+            "Océan Arctique",
+            "Océan Pacifique"
+        ],
+        "correctAnswer": 3,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le plus célèbre tableau de Vincent van Gogh?",
+        "choices": [
+            "La Nuit étoilée",
+            "Les Tournesols",
+            "Le Cri",
+            "La Cène"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom du plus grand théâtre de Paris?",
+        "choices": [
+            "Opéra Garnier",
+            "Comédie-Française",
+            "Opéra Bastille",
+            "Théâtre des Champs-Élysées"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel célèbre monument se trouve à New York?",
+        "choices": [
+            "Tour Eiffel",
+            "Big Ben",
+            "Statue de la Liberté",
+            "Colisée"
+        ],
+        "correctAnswer": 2,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le prénom de l'écrivain connu sous le nom de 'Mark Twain'?",
+        "choices": [
+            "Samuel",
+            "James",
+            "Charles",
+            "William"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom du célèbre festival de musique qui se déroule chaque année à Glastonbury?",
+        "choices": [
+            "Glastonbury Festival",
+            "Coachella",
+            "Lollapalooza",
+            "Reading Festival"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom du personnage principal dans le roman 'Harry Potter'?",
+        "choices": [
+            "Harry Potter",
+            "Hermione Granger",
+            "Ron Weasley",
+            "Albus Dumbledore"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le titre du premier film de la saga 'Star Wars'?",
+        "choices": [
+            "Un nouvel espoir",
+            "L'Empire contre-attaque",
+            "Le Retour du Jedi",
+            "La Menace fantôme"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom du compositeur de la Symphonie n°9 en ré mineur, 'Chorale'?",
+        "choices": [
+            "Ludwig van Beethoven",
+            "Wolfgang Amadeus Mozart",
+            "Johann Sebastian Bach",
+            "Frédéric Chopin"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel pays est le berceau du tango?",
+        "choices": [
+            "Argentine",
+            "Brésil",
+            "Colombie",
+            "Chili"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom du célèbre chef-d'œuvre de Michel-Ange situé au Vatican?",
+        "choices": [
+            "La Chapelle Sixtine",
+            "Le David",
+            "La Pietà",
+            "Le Jugement Dernier"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom de la plus grande bibliothèque du monde?",
+        "choices": [
+            "Bibliothèque du Congrès",
+            "British Library",
+            "Bibliothèque nationale de France",
+            "Bibliothèque d'Alexandrie"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel célèbre écrivain russe a écrit 'Guerre et Paix'?",
+        "choices": [
+            "Fiodor Dostoïevski",
+            "Léon Tolstoï",
+            "Anton Tchekhov",
+            "Vladimir Nabokov"
+        ],
+        "correctAnswer": 1,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom de la célèbre œuvre de Georges Bizet, souvent associée à l'opéra?",
+        "choices": [
+            "Carmen",
+            "La Bohème",
+            "Don Giovanni",
+            "Madame Butterfly"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom du célèbre monument situé à Paris, construit pour l'Exposition universelle de 1889?",
+        "choices": [
+            "Tour Eiffel",
+            "Arc de Triomphe",
+            "Notre-Dame",
+            "Panthéon"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom de l'astronaute américain qui a marché sur la Lune en 1969?",
+        "choices": [
+            "Neil Armstrong",
+            "Buzz Aldrin",
+            "Michael Collins",
+            "Yuri Gagarin"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le titre de l'œuvre célèbre écrite par William Shakespeare sur la tragédie d'un prince danois?",
+        "choices": [
+            "Hamlet",
+            "Macbeth",
+            "Othello",
+            "Roméo et Juliette"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom du célèbre écrivain britannique connu pour 'Les Chroniques de Narnia'?",
+        "choices": [
+            "J.K. Rowling",
+            "C.S. Lewis",
+            "J.R.R. Tolkien",
+            "Philip Pullman"
+        ],
+        "correctAnswer": 1,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom du groupe britannique qui a sorti l'album 'Abbey Road'?",
+        "choices": [
+            "The Rolling Stones",
+            "The Beatles",
+            "Led Zeppelin",
+            "Pink Floyd"
+        ],
+        "correctAnswer": 1,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom du célèbre festival de musique en Californie, connu pour sa programmation de grandes stars?",
+        "choices": [
+            "Coachella",
+            "Glastonbury",
+            "Lollapalooza",
+            "Reading Festival"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom du célèbre tableau de Leonardo da Vinci représentant une femme souriante?",
+        "choices": [
+            "La Nuit étoilée",
+            "La Joconde",
+            "Le Cri",
+            "La Cène"
+        ],
+        "correctAnswer": 1,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom du célèbre compositeur autrichien connu pour ses symphonies et opéras?",
+        "choices": [
+            "Ludwig van Beethoven",
+            "Wolfgang Amadeus Mozart",
+            "Johann Sebastian Bach",
+            "Frédéric Chopin"
+        ],
+        "correctAnswer": 1,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom du célèbre écrivain français connu pour 'Madame Bovary'?",
+        "choices": [
+            "Gustave Flaubert",
+            "Émile Zola",
+            "Victor Hugo",
+            "Marcel Proust"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    },
+    {
+        "text": "Quel est le nom du célèbre compositeur allemand connu pour ses concertos pour piano et symphonies?",
+        "choices": [
+            "Ludwig van Beethoven",
+            "Wolfgang Amadeus Mozart",
+            "Johann Sebastian Bach",
+            "Frédéric Chopin"
+        ],
+        "correctAnswer": 0,
+        "type": "Culture Générale"
+    }
+]
