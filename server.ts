@@ -5,39 +5,57 @@ import { setupWebSocket } from "./src/handlers/websocketHandlers";
 import authRoutes from './src/routes/authRoutes';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import { createClient } from '@supabase/supabase-js';
+import { initDB, pool } from './src/db/pool';
 
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-const supabaseUrl = process.env.SUPABASE_URL || '';
-const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || '';
-
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.warn("Attention : Les variables d'environnement SUPABASE sont manquantes !");
-}
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// CORS configuration
 app.use(cors({
-  origin: '*',
+  origin: process.env.FRONTEND_URL || '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
+// Routes
 app.use('/auth', authRoutes);
 
+// Health check
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
 
 const server = http.createServer(app);
 const wss = new WebSocketServer({ server });
 
 setupWebSocket(wss);
 
-server.listen(port, () => {
-  console.log(`Serveur écoute sur http://localhost:${port}`);
-  console.log(`🚀 Base de données : Supabase (PostgreSQL)`);
-  console.log(`📡 WebSocket configuré`);
-  console.log(`CTRL + C pour arrêter le serveur`);
+// Initialize database and start server
+async function start() {
+  try {
+    await initDB();
+
+    server.listen(port, () => {
+      console.log(`\n🚀 Server running on http://localhost:${port}`);
+      console.log(`📦 Database: Neon PostgreSQL`);
+      console.log(`📡 WebSocket configured`);
+      console.log(`💾 Tables initialized`);
+      console.log(`CTRL + C to stop\n`);
+    });
+  } catch (error) {
+    console.error('Failed to start server:', error);
+    process.exit(1);
+  }
+}
+
+start();
+
+// Graceful shutdown
+process.on('SIGINT', async () => {
+  console.log('\nShutting down...');
+  await pool.end();
+  process.exit(0);
 });

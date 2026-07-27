@@ -1,23 +1,74 @@
-import { supabase } from "../../server";
+import fs from 'fs';
+import path from 'path';
 import { Question } from "../types";
 import axios from "axios";
 
+// Cache pour les questions chargées
+const questionsCache: Map<string, any[]> = new Map();
 
+/**
+ * Load questions from JSON files
+ */
+function loadQuestionsFromFile(category: string): any[] {
+  // Retourner du cache si déjà chargé
+  if (questionsCache.has(category)) {
+    return questionsCache.get(category)!;
+  }
+
+  try {
+    const filePath = path.join(__dirname, `../../questions/${category}.json`);
+    const rawData = fs.readFileSync(filePath, 'utf-8');
+    const questions = JSON.parse(rawData);
+    questionsCache.set(category, questions);
+    return questions;
+  } catch (error) {
+    console.error(`Error loading questions for category ${category}:`, error);
+    return [];
+  }
+}
+
+/**
+ * Get random questions from a category
+ */
 export const getRandomQuestions = async (numberOfQuestions: number, type: string): Promise<Question[]> => {
   try {
-    let query = supabase
-      .from('questions')
-      .select('text, choices, correct_answer, type');
+    let questions: any[] = [];
 
-    // 1. Appliquer le filtre de type si nécessaire
-    if (type !== 'Aléatoire') {
-      query = query.eq('type', type);
+    if (type === 'Aléatoire' || type === 'random') {
+      // Charger depuis toutes les catégories
+      const categories = ['art', 'culture', 'geographie', 'histoire', 'litterature', 'manga', 'science', 'serie', 'sport', 'technologie'];
+      for (const cat of categories) {
+        const catQuestions = loadQuestionsFromFile(cat);
+        questions = questions.concat(catQuestions);
+      }
+    } else {
+      // Charger depuis la catégorie spécifiée
+      const categoryMap: { [key: string]: string } = {
+        'art': 'art',
+        'culture': 'culture',
+        'géographie': 'geographie',
+        'geographie': 'geographie',
+        'histoire': 'histoire',
+        'littérature': 'litterature',
+        'litterature': 'litterature',
+        'manga': 'manga',
+        'science': 'science',
+        'série': 'serie',
+        'serie': 'serie',
+        'sport': 'sport',
+        'technologie': 'technologie'
+      };
+
+      const fileName = categoryMap[type.toLowerCase()] || type.toLowerCase();
+      questions = loadQuestionsFromFile(fileName);
     }
-    const { data: questions, error } = await query;
 
-    if (error) throw error;
-    if (!questions) return [];
+    if (questions.length === 0) {
+      console.warn(`No questions found for type: ${type}`);
+      return [];
+    }
 
+    // Shuffler et prendre les N premières
     const shuffled = questions
       .sort(() => 0.5 - Math.random())
       .slice(0, numberOfQuestions);
@@ -25,11 +76,11 @@ export const getRandomQuestions = async (numberOfQuestions: number, type: string
     return shuffled.map((q: any) => ({
       text: q.text,
       choices: q.choices,
-      correctAnswer: q.correct_answer,
-      type: q.type,
+      correctAnswer: q.correctAnswer || q.correct_answer,
+      type: q.type || type,
     }));
   } catch (error) {
-    console.error('Error retrieving random questions from Supabase:', error);
+    console.error('Error retrieving random questions:', error);
     throw error;
   }
 };

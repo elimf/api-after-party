@@ -12,7 +12,8 @@ import {
 } from "./roomHandler";
 import { handleBacResponse, startBacGame } from "./bacGameHandler";
 import jwt from "jsonwebtoken";
-import { supabase } from "../../server";
+import { query } from "../db/pool";
+
 const SECRET_KEY = process.env.SECRET_KEY || "your-secret-key";
 
 // Fonction pour configurer les gestionnaires WebSocket
@@ -105,18 +106,18 @@ export function setupWebSocket(wss: WebSocketServer) {
 async function handleLogin(ws: WebSocket, wss: WebSocketServer, token: string) {
   try {
     // Décoder le token JWT pour obtenir l'identifiant de l'utilisateur
-    const decoded = jwt.verify(token, SECRET_KEY) as { userUuid?: string, userId?: string };
-    const userUuid = decoded.userUuid || decoded.userId;
+    const decoded = jwt.verify(token, SECRET_KEY) as { id?: string, userId?: string };
+    const userId = decoded.id || decoded.userId;
 
-    if (!userUuid) throw new Error("UUID manquant dans le token");
+    if (!userId) throw new Error("ID manquant dans le token");
 
-    const { data: user, error } = await supabase
-      .from('users')
-      .select('uuid, username')
-      .eq('uuid', userUuid)
-      .single();
+    // Récupérer l'utilisateur depuis Neon PostgreSQL
+    const result = await query(
+      'SELECT id, username FROM users WHERE id = $1',
+      [userId]
+    );
 
-    if (error || !user) {
+    if (!result.rows || result.rows.length === 0) {
       ws.send(JSON.stringify({
         type: "system",
         message: "Utilisateur introuvable dans la base de données",
@@ -125,7 +126,8 @@ async function handleLogin(ws: WebSocket, wss: WebSocketServer, token: string) {
       ws.close();
       return;
     }
-    const userId = user.uuid;
+
+    const user = result.rows[0];
     const userName = user.username;
 
     let existingUser = users.get(userId);
