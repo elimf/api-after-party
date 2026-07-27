@@ -3,6 +3,14 @@ import { getFormattedQuestions, getRandomQuestions } from "../utils/gameUtils";
 import { rooms, users, artists } from "../data";
 import { Room, UserConncted } from "../types";
 import { broadcastRooms } from "../utils/websocketUtils";
+import { query } from "../db/pool";
+import { SpotifyConnector } from "../core/music-connectors/spotifyConnector";
+import { SpotifyTrackProvider } from "../utils/spotifyTrackProvider";
+
+const spotifyConnector = new SpotifyConnector(
+  process.env.SPOTIFY_CLIENT_ID || '',
+  process.env.SPOTIFY_CLIENT_SECRET || ''
+);
 
 export async function handleQuiz(
   ws: WebSocket,
@@ -13,6 +21,9 @@ export async function handleQuiz(
   const numQuestions = parseInt(parsedMessage.numberQuestion);
   const type = parsedMessage.typeQuestion;
   const difficulty = parsedMessage.difficulty;
+  const musicSource = parsedMessage.musicSource || 'artists'; // Default to artists
+  const sourceId = parsedMessage.sourceId;
+  const userId = parsedMessage.user;
   const triviaRoom = rooms.get(triviaRoomId);
 
   if (triviaRoom) {
@@ -34,10 +45,52 @@ export async function handleQuiz(
     triviaRoom.quiz.type = type;
     triviaRoom.quiz.difficulty = difficulty;
 
-    triviaRoom.quiz.questions =
-      type != "Blindtest"
-        ? await getRandomQuestions(numQuestions, type)
-        : await getFormattedQuestions(artists, numQuestions);
+    // Load questions based on source
+    if (type !== "Blindtest") {
+      triviaRoom.quiz.questions = await getRandomQuestions(numQuestions, type);
+    } else {
+      // Handle Blindtest with different music sources
+      try {
+        let questions = [];
+
+        if (musicSource === 'playlists' || musicSource === 'themes') {
+          // Fetch user's Spotify token from database
+          const userResult = await query(
+            'SELECT spotify_access_token FROM users WHERE id = $1',
+            [userId]
+          );
+
+          const spotifyToken = userResult.rows[0]?.spotify_access_token;
+
+          if (!spotifyToken) {
+            console.warn(`No Spotify token for user ${userId}, falling back to artists`);
+            questions = await getFormattedQuestions(artists, numQuestions);
+          } else {
+            const spotifyTrackProvider = new SpotifyTrackProvider(spotifyConnector);
+            try {
+              questions = await spotifyTrackProvider.generateQuizQuestions(
+                musicSource,
+                sourceId,
+                spotifyToken,
+                numQuestions
+              );
+            } catch (error) {
+              console.error(`Error generating ${musicSource} questions:`, error);
+              questions = await getFormattedQuestions(artists, numQuestions);
+            }
+          }
+        } else {
+          // Default to artists
+          questions = await getFormattedQuestions(artists, numQuestions);
+        }
+
+        triviaRoom.quiz.questions = questions;
+      } catch (error) {
+        console.error('Error loading blindtest questions:', error);
+        triviaRoom.quiz.questions = await getFormattedQuestions(artists, numQuestions);
+      }
+    }
+
     triviaRoom.quiz.totalQuestions = numQuestions;
 
     // Start the trivia game

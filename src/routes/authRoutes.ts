@@ -3,9 +3,17 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import { query } from '../db/pool';
 import { v4 as uuidv4 } from 'uuid';
+import { SpotifyConnector } from '../core/music-connectors/spotifyConnector';
 
 const router = express.Router();
 const SECRET_KEY = process.env.SECRET_KEY || 'your-secret-key';
+
+const spotifyConnector = new SpotifyConnector(
+  process.env.SPOTIFY_CLIENT_ID || '',
+  process.env.SPOTIFY_CLIENT_SECRET || ''
+);
+
+const SPOTIFY_CALLBACK_URL = process.env.SPOTIFY_CALLBACK_URL || 'http://localhost:4000/auth/spotify/callback';
 
 router.post('/register', async (req, res) => {
   const { email, password, username } = req.body;
@@ -89,6 +97,95 @@ router.post('/login', async (req, res) => {
   } catch (error) {
     console.error('Login error:', error);
     res.status(500).json({ error: 'Login failed' });
+  }
+});
+
+// Spotify OAuth Routes
+router.get('/spotify/authorize', (req, res) => {
+  try {
+    const state = uuidv4();
+    const authorizeUrl = spotifyConnector.getAuthorizeUrl(state, SPOTIFY_CALLBACK_URL);
+
+    // Store state in session for later verification (in production, use session store)
+    res.redirect(authorizeUrl);
+  } catch (error) {
+    console.error('Spotify authorize error:', error);
+    res.status(500).json({ error: 'Failed to initiate Spotify authorization' });
+  }
+});
+
+router.get('/spotify/callback', async (req, res) => {
+  const { code, error } = req.query;
+
+  try {
+    if (error) {
+      return res.status(400).json({ error: `Spotify authorization failed: ${error}` });
+    }
+
+    if (!code || typeof code !== 'string') {
+      return res.status(400).json({ error: 'Missing authorization code' });
+    }
+
+    // Exchange code for token
+    const tokenData = await spotifyConnector.exchangeCodeForToken(code, SPOTIFY_CALLBACK_URL);
+
+    // Get user profile from Spotify
+    const userProfile = await spotifyConnector.getUserProfile(tokenData.accessToken);
+
+    // Check if user already exists
+    const existingUser = await query(
+      'SELECT id, email, username FROM users WHERE spotify_id = $1',
+      [userProfile.id]
+    );
+
+    let userId: string;
+    let token: string;
+
+    if (existingUser.rows.length > 0) {
+      // Update existing user with new token
+      userId = existingUser.rows[0].id;
+
+      const expiresAt = new Date(Date.now() + tokenData.expiresIn * 1000);
+
+      await query(
+        `UPDATE users
+         SET spotify_access_token = $1,
+             spotify_refresh_token = $2,
+             spotify_expires_at = $3,
+             updated_at = NOW()
+         WHERE id = $4`,
+        [tokenData.accessToken, tokenData.refreshToken || null, expiresAt, userId]
+      );
+    } else {
+      // Create new user
+      userId = uuidv4();
+      const expiresAt = new Date(Date.now() + tokenData.expiresIn * 1000);
+
+      await query(
+        `INSERT INTO users (id, email, username, spotify_id, spotify_access_token, spotify_refresh_token, spotify_expires_at, password_hash)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
+        [
+          userId,
+          userProfile.external_urls?.spotify || `spotify-${userProfile.id}@example.com`,
+          userProfile.display_name || `spotify_${userProfile.id}`,
+          userProfile.id,
+          tokenData.accessToken,
+          tokenData.refreshToken || null,
+          expiresAt,
+          'spotify-oauth' // Placeholder, user authenticated via Spotify
+        ]
+      );
+    }
+
+    // Generate JWT token for our app
+    token = jwt.sign({ id: userId, email: userProfile.id }, SECRET_KEY, { expiresIn: '30d' });
+
+    // Redirect to frontend with token in query string
+    const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
+    res.redirect(`${frontendUrl}/login?token=${token}&spotify_user=${userProfile.display_name}`);
+  } catch (error) {
+    console.error('Spotify callback error:', error);
+    res.status(500).json({ error: 'Spotify authentication failed' });
   }
 });
 

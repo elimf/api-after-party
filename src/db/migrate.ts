@@ -16,6 +16,12 @@ CREATE TABLE IF NOT EXISTS users (
   updated_at TIMESTAMP DEFAULT NOW()
 );
 
+-- Add Spotify columns if they don't exist
+ALTER TABLE users ADD COLUMN IF NOT EXISTS spotify_id VARCHAR(255) UNIQUE;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS spotify_access_token TEXT;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS spotify_refresh_token TEXT;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS spotify_expires_at TIMESTAMP;
+
 -- Game rooms table
 CREATE TABLE IF NOT EXISTS game_rooms (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -65,6 +71,7 @@ CREATE TABLE IF NOT EXISTS bac_scores (
 -- Indexes for performance
 CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
 CREATE INDEX IF NOT EXISTS idx_users_username ON users(username);
+CREATE INDEX IF NOT EXISTS idx_users_spotify_id ON users(spotify_id);
 CREATE INDEX IF NOT EXISTS idx_game_rooms_owner ON game_rooms(owner_id);
 CREATE INDEX IF NOT EXISTS idx_game_results_user ON game_results(user_id);
 CREATE INDEX IF NOT EXISTS idx_game_results_room ON game_results(room_id);
