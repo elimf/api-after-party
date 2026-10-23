@@ -39,6 +39,7 @@ export const startQuizSchema = z.object({
   difficulty: z.string().min(1),
   musicSource: z.string().optional(),
   sourceId: z.string().optional(),
+  includeFeatures: z.boolean().optional(),
 });
 
 export const submitAnswerSchema = z.object({

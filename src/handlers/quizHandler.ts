@@ -43,7 +43,10 @@ export async function handleQuiz(
     if (type !== "Blindtest") {
       triviaRoom.quiz.questions = await getRandomQuestions(numQuestions, type);
     } else {
-      triviaRoom.quiz.questions = await buildBlindtestQuestions(musicSource, sourceId, numQuestions);
+      const includeFeatures = parsedMessage.includeFeatures !== false;
+      console.log('[Blindtest]', { musicSource, sourceId, includeFeatures, numQuestions, difficulty });
+      triviaRoom.quiz.questions = await buildBlindtestQuestions(musicSource, sourceId, numQuestions, difficulty, { includeFeatures });
+      console.log('[Blindtest] questions:', triviaRoom.quiz.questions.length);
     }
 
     triviaRoom.quiz.totalQuestions = numQuestions;

@@ -3,6 +3,7 @@ import http from "http";
 import { Server as WebSocketServer } from "ws";
 import { setupWebSocket } from "./src/handlers/websocketHandlers";
 import authRoutes from './src/routes/authRoutes';
+import blindtestRoutes from './src/routes/blindtestRoutes';
 import cors from 'cors';
 import { initDB, pool } from './src/db/pool';
 import { env } from './src/config/env';
@@ -20,6 +21,7 @@ app.use(express.json());
 
 // Routes
 app.use('/auth', authRoutes);
+app.use('/blindtest', blindtestRoutes);
 
 // Health check
 app.get('/health', (req, res) => {

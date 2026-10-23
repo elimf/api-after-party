@@ -17,6 +17,7 @@ export type ClientToServerMessage =
       difficulty: string;
       musicSource?: string;
       sourceId?: string;
+      includeFeatures?: boolean;
     }
   | { type: 'submitAnswer'; roomId: string; user: string; answer: number; responseTime: number }
   | { type: 'startBacGame'; roomId: string; user?: string; timeLimit?: number; categories?: string[] }
