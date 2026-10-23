@@ -4,6 +4,7 @@ import { rooms, users } from '../data';
 import { broadcastRooms } from '../utils/websocketUtils';
 import { createRoomModel } from '../core/realtime-room/roomFactory';
 import { addUserToRoom, removeUserFromRoom, shouldDeleteRoom } from '../core/realtime-room/roomLifecycle';
+import { bacTimerManager, quizTimerManager } from '../utils/timerManager';
 
 export function handleCreateRoom(
   ws: WebSocket,
@@ -92,6 +93,8 @@ export function handleLeaveRoom(
   });
 
   if (shouldDeleteRoom(roomToLeave, userToLeaveId)) {
+    quizTimerManager.clear(leaveRoomId);
+    bacTimerManager.clear(leaveRoomId);
     rooms.delete(leaveRoomId);
 
     if (ws.readyState === WebSocket.OPEN) {

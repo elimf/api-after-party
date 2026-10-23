@@ -13,8 +13,15 @@ import {
 import { handleBacResponse, startBacGame } from "./bacGameHandler";
 import jwt from "jsonwebtoken";
 import { query } from "../db/pool";
+import { ClientToServerMessage } from "../types/ws";
+import { bacTimerManager, quizTimerManager } from "../utils/timerManager";
 
-const SECRET_KEY = process.env.SECRET_KEY || "your-secret-key";
+const SECRET_KEY = process.env.SECRET_KEY;
+
+if (!SECRET_KEY) {
+  console.error("SECRET_KEY n'est pas défini dans les variables d'environnement");
+  process.exit(1);
+}
 
 // Fonction pour configurer les gestionnaires WebSocket
 export function setupWebSocket(wss: WebSocketServer) {
@@ -22,8 +29,15 @@ export function setupWebSocket(wss: WebSocketServer) {
     let userId: string | null = null;
     let currentRoomId: string | null = null;
 
-    ws.on("message", async (message: string) => {
-      const parsedMessage = JSON.parse(message);
+    ws.on("message", async (rawMessage: string) => {
+      let parsedMessage: ClientToServerMessage;
+      try {
+        parsedMessage = JSON.parse(rawMessage);
+      } catch (e) {
+        ws.send(JSON.stringify({ type: "error", message: "Message invalide" }));
+        return;
+      }
+
       switch (parsedMessage.type) {
         case "start":
           await handleLogin(ws, wss, parsedMessage.token);
@@ -96,6 +110,10 @@ export function setupWebSocket(wss: WebSocketServer) {
       }
 
       if (userId) {
+        if (currentRoomId) {
+          quizTimerManager.clear(currentRoomId);
+          bacTimerManager.clear(currentRoomId);
+        }
         handleDisconnect(userId, currentRoomId, wss);
       }
     });
@@ -106,7 +124,7 @@ export function setupWebSocket(wss: WebSocketServer) {
 async function handleLogin(ws: WebSocket, wss: WebSocketServer, token: string) {
   try {
     // Décoder le token JWT pour obtenir l'identifiant de l'utilisateur
-    const decoded = jwt.verify(token, SECRET_KEY) as { id?: string, userId?: string };
+    const decoded = jwt.verify(token, SECRET_KEY as jwt.Secret) as { id?: string, userId?: string };
     const userId = decoded.id || decoded.userId;
 
     if (!userId) throw new Error("ID manquant dans le token");

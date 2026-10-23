@@ -7,8 +7,7 @@ import {
   startBacRound,
   submitBacRoundResponses,
 } from '../core/game-engine/petitBacEngine';
-
-const bacTimers = new Map<string, NodeJS.Timeout>();
+import { bacTimerManager } from '../utils/timerManager';
 
 export function startBacGame(
   ws: WebSocket,
@@ -18,10 +17,7 @@ export function startBacGame(
   const room = rooms.get(parsedMessage.roomId);
   if (!room) return;
 
-  if (bacTimers.has(room.id)) {
-    clearTimeout(bacTimers.get(room.id)!);
-    bacTimers.delete(room.id);
-  }
+  bacTimerManager.clear(room.id);
 
   const timeLimit = Number(parsedMessage.timeLimit ?? room.bacGame.timeLimit);
   const categories = Array.isArray(parsedMessage.categories) ? parsedMessage.categories : undefined;
@@ -37,10 +33,10 @@ export function startBacGame(
     const timeout = setTimeout(() => {
       forceFinishBacRound(room, users);
       publishRoundResult(room, true);
-      bacTimers.delete(room.id);
+      bacTimerManager.clearOne(room.id, timeout);
     }, room.bacGame.timeLimit);
 
-    bacTimers.set(room.id, timeout);
+    bacTimerManager.set(room.id, timeout);
   }
 
   ws.send(JSON.stringify({ type: 'system', message: 'Partie Petit Bac demarree' }));
@@ -70,10 +66,7 @@ export function handleBacResponse(
   }
 
   if (result.shouldEndRound) {
-    if (bacTimers.has(room.id)) {
-      clearTimeout(bacTimers.get(room.id)!);
-      bacTimers.delete(room.id);
-    }
+    bacTimerManager.clear(room.id);
 
     finalizeBacRound(room, users);
     publishRoundResult(room, false);

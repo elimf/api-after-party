@@ -1,11 +1,10 @@
 import WebSocket, { Server as WebSocketServer } from "ws";
-import { getFormattedQuestions, getRandomQuestions } from "../utils/gameUtils";
-import { rooms, users, artists } from "../data";
+import { getRandomQuestions } from "../utils/gameUtils";
+import { rooms, users } from "../data";
 import { Room, UserConncted } from "../types";
 import { broadcastRooms } from "../utils/websocketUtils";
-import { ITunesConnector } from "../core/music-connectors/itunesConnector";
-
-const itunesConnector = new ITunesConnector();
+import { quizTimerManager } from "../utils/timerManager";
+import { buildBlindtestQuestions } from "../core/music-connectors/blindtestBuilder";
 
 export async function handleQuiz(
   ws: WebSocket,
@@ -16,7 +15,7 @@ export async function handleQuiz(
   const numQuestions = parseInt(parsedMessage.numberQuestion);
   const type = parsedMessage.typeQuestion;
   const difficulty = parsedMessage.difficulty;
-  const musicSource = parsedMessage.musicSource || 'artists'; // Default to artists
+  const musicSource = parsedMessage.musicSource || 'artists';
   const sourceId = parsedMessage.sourceId;
   const userId = parsedMessage.user;
   const triviaRoom = rooms.get(triviaRoomId);
@@ -44,116 +43,7 @@ export async function handleQuiz(
     if (type !== "Blindtest") {
       triviaRoom.quiz.questions = await getRandomQuestions(numQuestions, type);
     } else {
-      // Handle Blindtest - use iTunes API for music preview
-      try {
-        let questions = [];
-
-        if (musicSource === 'artists' && sourceId === 'random') {
-          // Mode: Artistes prédéfinis - pioche aléatoire dans la liste
-          questions = await getFormattedQuestions(artists, numQuestions);
-        } else if (musicSource === 'genre') {
-          // Mode: Par genre - cherche sur iTunes selon le genre
-          const genreMap: { [key: string]: string } = {
-            'rap': 'Hip-Hop',
-            'rnb': 'R&B',
-            'pop': 'Pop',
-            'rock': 'Rock',
-            'electronic': 'Electronic',
-            'indie': 'Indie',
-            'reggae': 'Reggae',
-            'gospel': 'Gospel',
-            'jazz': 'Jazz',
-            'classical': 'Classical',
-            'country': 'Country',
-            'disco': 'Funk',
-            'kpop': 'K-pop',
-            'latino': 'Latin',
-            'metal': 'Metal',
-            'blues': 'Blues',
-            'reggaeton': 'Reggaeton',
-            'afrobeats': 'Afrobeats',
-          };
-
-          const genreName = genreMap[sourceId] || sourceId;
-          const tracks = await itunesConnector.searchArtistTracks(genreName, numQuestions * 3);
-
-          if (tracks.length >= numQuestions) {
-            questions = tracks.slice(0, numQuestions).map((track, index) => ({
-              text: `What song is this?`,
-              choices: [
-                track.title,
-                tracks[(index + 1) % tracks.length].title,
-                tracks[(index + 2) % tracks.length].title,
-              ].sort(() => Math.random() - 0.5),
-              correctAnswer: 0,
-              type: 'Blindtest',
-              mediaUrl: track.previewUrl || track.trackUri,
-            }));
-          } else {
-            console.warn(`Not enough iTunes tracks for genre ${genreName}, falling back to artists`);
-            questions = await getFormattedQuestions(artists, numQuestions);
-          }
-        } else if (musicSource === 'country') {
-          // Mode: Par pays - cherche les top du pays
-          const countrySearch = sourceId === 'FR' ? 'top France' : `top ${sourceId}`;
-          const tracks = await itunesConnector.searchArtistTracks(countrySearch, numQuestions * 3);
-
-          if (tracks.length >= numQuestions) {
-            questions = tracks.slice(0, numQuestions).map((track, index) => ({
-              text: `What song is this?`,
-              choices: [
-                track.title,
-                tracks[(index + 1) % tracks.length].title,
-                tracks[(index + 2) % tracks.length].title,
-              ].sort(() => Math.random() - 0.5),
-              correctAnswer: 0,
-              type: 'Blindtest',
-              mediaUrl: track.previewUrl || track.trackUri,
-            }));
-          } else {
-            questions = await getFormattedQuestions(artists, numQuestions);
-          }
-        } else if (musicSource === 'theme') {
-          // Mode: Par thème/Playlist - cherche les thèmes spéciaux
-          const themeMap: { [key: string]: string } = {
-            'top100': 'Top 100',
-            'party': 'Party hits',
-            'summer': 'Summer hits',
-            'workout': 'Workout',
-            'chill': 'Chill',
-            'love': 'Love songs',
-            'indie': 'Indie',
-            'classics': 'All-time classics',
-          };
-
-          const themeName = themeMap[sourceId] || sourceId;
-          const tracks = await itunesConnector.searchArtistTracks(themeName, numQuestions * 3);
-
-          if (tracks.length >= numQuestions) {
-            questions = tracks.slice(0, numQuestions).map((track, index) => ({
-              text: `What song is this?`,
-              choices: [
-                track.title,
-                tracks[(index + 1) % tracks.length].title,
-                tracks[(index + 2) % tracks.length].title,
-              ].sort(() => Math.random() - 0.5),
-              correctAnswer: 0,
-              type: 'Blindtest',
-              mediaUrl: track.previewUrl || track.trackUri,
-            }));
-          } else {
-            questions = await getFormattedQuestions(artists, numQuestions);
-          }
-        } else {
-          // Fallback
-          questions = await getFormattedQuestions(artists, numQuestions);
-        }
-
-        triviaRoom.quiz.questions = questions;
-      } catch (error) {
-        console.error('Error loading blindtest questions:', error);
-        triviaRoom.quiz.questions = await getFormattedQuestions(artists, numQuestions);
-      }
+      triviaRoom.quiz.questions = await buildBlindtestQuestions(musicSource, sourceId, numQuestions);
     }
 
     triviaRoom.quiz.totalQuestions = numQuestions;
@@ -230,6 +120,8 @@ function askQuestion(
 ) {
   if (!room.quiz.isRunning) return;
 
+  quizTimerManager.clear(room.id);
+
   const question = room.quiz.questions[room.currentQuestionIndex];
 
   // Envoyer la question à tous les utilisateurs
@@ -255,6 +147,7 @@ function askQuestion(
   const reveal = () => {
     if (!hasRevealed) {
       hasRevealed = true;
+      quizTimerManager.clear(room.id);
       revealAnswer(room, wss, rooms, users);
     }
   };
@@ -269,6 +162,7 @@ function askQuestion(
   const timeoutId = setTimeout(() => {
     reveal();
   }, room.quiz.timeLimit);
+  quizTimerManager.set(room.id, timeoutId);
 
   // Fonction de vérification périodique
   const checkResponses = () => {
@@ -285,6 +179,7 @@ function askQuestion(
       clearInterval(checkIntervalId); // Arrêter l'intervalle si déjà révélé
     }
   }, 500); // Vérifier deux fois par seconde pour réactivité améliorée
+  quizTimerManager.set(room.id, checkIntervalId);
 }
 
 function revealAnswer(
@@ -333,6 +228,7 @@ function endQuiz(
   rooms: Map<string, Room>,
   users: Map<string, UserConncted>
 ) {
+  quizTimerManager.clear(room.id);
   room.quiz.isRunning = false;
 
   // Calculate user statistics
