@@ -3,14 +3,9 @@ import { getFormattedQuestions, getRandomQuestions } from "../utils/gameUtils";
 import { rooms, users, artists } from "../data";
 import { Room, UserConncted } from "../types";
 import { broadcastRooms } from "../utils/websocketUtils";
-import { query } from "../db/pool";
-import { SpotifyConnector } from "../core/music-connectors/spotifyConnector";
-import { SpotifyTrackProvider } from "../utils/spotifyTrackProvider";
+import { ITunesConnector } from "../core/music-connectors/itunesConnector";
 
-const spotifyConnector = new SpotifyConnector(
-  process.env.SPOTIFY_CLIENT_ID || '',
-  process.env.SPOTIFY_CLIENT_SECRET || ''
-);
+const itunesConnector = new ITunesConnector();
 
 export async function handleQuiz(
   ws: WebSocket,
@@ -49,38 +44,108 @@ export async function handleQuiz(
     if (type !== "Blindtest") {
       triviaRoom.quiz.questions = await getRandomQuestions(numQuestions, type);
     } else {
-      // Handle Blindtest with different music sources
+      // Handle Blindtest - use iTunes API for music preview
       try {
         let questions = [];
 
-        if (musicSource === 'playlists' || musicSource === 'themes') {
-          // Fetch user's Spotify token from database
-          const userResult = await query(
-            'SELECT spotify_access_token FROM users WHERE id = $1',
-            [userId]
-          );
+        if (musicSource === 'artists' && sourceId === 'random') {
+          // Mode: Artistes prédéfinis - pioche aléatoire dans la liste
+          questions = await getFormattedQuestions(artists, numQuestions);
+        } else if (musicSource === 'genre') {
+          // Mode: Par genre - cherche sur iTunes selon le genre
+          const genreMap: { [key: string]: string } = {
+            'rap': 'Hip-Hop',
+            'rnb': 'R&B',
+            'pop': 'Pop',
+            'rock': 'Rock',
+            'electronic': 'Electronic',
+            'indie': 'Indie',
+            'reggae': 'Reggae',
+            'gospel': 'Gospel',
+            'jazz': 'Jazz',
+            'classical': 'Classical',
+            'country': 'Country',
+            'disco': 'Funk',
+            'kpop': 'K-pop',
+            'latino': 'Latin',
+            'metal': 'Metal',
+            'blues': 'Blues',
+            'reggaeton': 'Reggaeton',
+            'afrobeats': 'Afrobeats',
+          };
 
-          const spotifyToken = userResult.rows[0]?.spotify_access_token;
+          const genreName = genreMap[sourceId] || sourceId;
+          const tracks = await itunesConnector.searchArtistTracks(genreName, numQuestions * 3);
 
-          if (!spotifyToken) {
-            console.warn(`No Spotify token for user ${userId}, falling back to artists`);
-            questions = await getFormattedQuestions(artists, numQuestions);
+          if (tracks.length >= numQuestions) {
+            questions = tracks.slice(0, numQuestions).map((track, index) => ({
+              text: `What song is this?`,
+              choices: [
+                track.title,
+                tracks[(index + 1) % tracks.length].title,
+                tracks[(index + 2) % tracks.length].title,
+              ].sort(() => Math.random() - 0.5),
+              correctAnswer: 0,
+              type: 'Blindtest',
+              mediaUrl: track.previewUrl || track.trackUri,
+            }));
           } else {
-            const spotifyTrackProvider = new SpotifyTrackProvider(spotifyConnector);
-            try {
-              questions = await spotifyTrackProvider.generateQuizQuestions(
-                musicSource,
-                sourceId,
-                spotifyToken,
-                numQuestions
-              );
-            } catch (error) {
-              console.error(`Error generating ${musicSource} questions:`, error);
-              questions = await getFormattedQuestions(artists, numQuestions);
-            }
+            console.warn(`Not enough iTunes tracks for genre ${genreName}, falling back to artists`);
+            questions = await getFormattedQuestions(artists, numQuestions);
+          }
+        } else if (musicSource === 'country') {
+          // Mode: Par pays - cherche les top du pays
+          const countrySearch = sourceId === 'FR' ? 'top France' : `top ${sourceId}`;
+          const tracks = await itunesConnector.searchArtistTracks(countrySearch, numQuestions * 3);
+
+          if (tracks.length >= numQuestions) {
+            questions = tracks.slice(0, numQuestions).map((track, index) => ({
+              text: `What song is this?`,
+              choices: [
+                track.title,
+                tracks[(index + 1) % tracks.length].title,
+                tracks[(index + 2) % tracks.length].title,
+              ].sort(() => Math.random() - 0.5),
+              correctAnswer: 0,
+              type: 'Blindtest',
+              mediaUrl: track.previewUrl || track.trackUri,
+            }));
+          } else {
+            questions = await getFormattedQuestions(artists, numQuestions);
+          }
+        } else if (musicSource === 'theme') {
+          // Mode: Par thème/Playlist - cherche les thèmes spéciaux
+          const themeMap: { [key: string]: string } = {
+            'top100': 'Top 100',
+            'party': 'Party hits',
+            'summer': 'Summer hits',
+            'workout': 'Workout',
+            'chill': 'Chill',
+            'love': 'Love songs',
+            'indie': 'Indie',
+            'classics': 'All-time classics',
+          };
+
+          const themeName = themeMap[sourceId] || sourceId;
+          const tracks = await itunesConnector.searchArtistTracks(themeName, numQuestions * 3);
+
+          if (tracks.length >= numQuestions) {
+            questions = tracks.slice(0, numQuestions).map((track, index) => ({
+              text: `What song is this?`,
+              choices: [
+                track.title,
+                tracks[(index + 1) % tracks.length].title,
+                tracks[(index + 2) % tracks.length].title,
+              ].sort(() => Math.random() - 0.5),
+              correctAnswer: 0,
+              type: 'Blindtest',
+              mediaUrl: track.previewUrl || track.trackUri,
+            }));
+          } else {
+            questions = await getFormattedQuestions(artists, numQuestions);
           }
         } else {
-          // Default to artists
+          // Fallback
           questions = await getFormattedQuestions(artists, numQuestions);
         }
 

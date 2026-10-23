@@ -5,7 +5,8 @@ export interface UserTrack {
   album?: string;
   previewUrl?: string;
   artworkUrl?: string;
-  source: 'spotify' | 'deezer';
+  trackUri?: string;
+  source: 'spotify' | 'deezer' | 'itunes';
 }
 
 export interface MusicConnector {

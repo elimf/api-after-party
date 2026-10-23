@@ -21,6 +21,7 @@ interface SpotifyUserProfile {
 interface SpotifyTrack {
   id: string;
   name: string;
+  uri: string;
   artists: Array<{ name: string }>;
   album: {
     name: string;
@@ -54,7 +55,7 @@ export class SpotifyConnector implements MusicConnector {
       client_id: this.clientId,
       response_type: 'code',
       redirect_uri: redirectUri,
-      scope: 'playlist-read-private playlist-read-collaborative streaming user-read-private user-read-email',
+      scope: 'streaming user-read-private user-read-email user-modify-playback-state user-read-playback-state playlist-read-private playlist-read-collaborative',
       state,
     });
 
@@ -171,7 +172,7 @@ export class SpotifyConnector implements MusicConnector {
     if (!response.ok) return [];
 
     const data = await response.json();
-    return data.items?.map((item: any) => this.formatTrack(item.track)).filter((track: UserTrack | null) => track !== null) || [];
+    return data.items?.map((item: any) => this.formatTrack(item.track, false)) || [];
   }
 
   async getPlaylistById(accessToken: string, playlistId: string): Promise<SpotifyPlaylist> {
@@ -186,8 +187,38 @@ export class SpotifyConnector implements MusicConnector {
     return response.json();
   }
 
-  private formatTrack(track: SpotifyTrack | null): UserTrack | null {
-    if (!track || !track.preview_url) return null;
+  async searchTrackWithPreview(accessToken: string, title: string, artist: string): Promise<UserTrack | null> {
+    try {
+      const query = encodeURIComponent(`${title} ${artist}`);
+      const response = await fetch(
+        `${this.baseApiUrl}/search?q=${query}&type=track&limit=5`,
+        { headers: { 'Authorization': `Bearer ${accessToken}` } }
+      );
+
+      if (!response.ok) return null;
+
+      const data = await response.json();
+      const tracks = data.tracks?.items || [];
+
+      // Find first track with preview URL
+      for (const track of tracks) {
+        if (track.preview_url) {
+          return this.formatTrack(track, false);
+        }
+      }
+
+      return null;
+    } catch (error) {
+      console.error('Error searching for track:', error);
+      return null;
+    }
+  }
+
+  private formatTrack(track: SpotifyTrack | null, requirePreview: boolean = true): UserTrack | null {
+    if (!track) return null;
+
+    // Only reject if preview is required and missing
+    if (requirePreview && !track.preview_url) return null;
 
     return {
       id: track.id,
@@ -195,7 +226,8 @@ export class SpotifyConnector implements MusicConnector {
       artist: track.artists[0]?.name || 'Unknown',
       album: track.album.name,
       artworkUrl: track.album.images[0]?.url,
-      previewUrl: track.preview_url,
+      previewUrl: track.preview_url || undefined,
+      trackUri: track.uri,
       source: 'spotify',
     };
   }
