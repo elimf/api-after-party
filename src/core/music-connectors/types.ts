@@ -6,11 +6,11 @@ export interface UserTrack {
   previewUrl?: string;
   artworkUrl?: string;
   trackUri?: string;
-  source: 'spotify' | 'deezer' | 'itunes';
+  source: 'deezer' | 'itunes';
 }
 
 export interface MusicConnector {
-  provider: 'spotify' | 'deezer';
+  provider: 'deezer';
   getAuthorizeUrl(state: string, redirectUri: string): string;
   exchangeCodeForToken(code: string, redirectUri: string): Promise<{ accessToken: string; refreshToken?: string; expiresIn: number }>;
   refreshAccessToken(refreshToken: string): Promise<{ accessToken: string; refreshToken?: string; expiresIn: number }>;
