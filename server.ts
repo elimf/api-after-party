@@ -3,18 +3,16 @@ import http from "http";
 import { Server as WebSocketServer } from "ws";
 import { setupWebSocket } from "./src/handlers/websocketHandlers";
 import authRoutes from './src/routes/authRoutes';
-import dotenv from 'dotenv';
 import cors from 'cors';
 import { initDB, pool } from './src/db/pool';
-
-dotenv.config();
+import { env } from './src/config/env';
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = env.PORT;
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.FRONTEND_URL || '*',
+  origin: env.FRONTEND_URL === '*' ? '*' : env.FRONTEND_URL,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));

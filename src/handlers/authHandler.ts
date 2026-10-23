@@ -1,12 +1,13 @@
 import WebSocket, { Server as WebSocketServer } from "ws";
 import jwt from "jsonwebtoken";
-import { query } from "../db/pool";
 import { UserConncted } from "../types";
 import { userService } from "../services/userService";
 import { roomService } from "../services/roomService";
 import { broadcastUsers } from "../utils/websocketUtils";
+import { userRepository } from "../repositories/userRepository";
+import { env } from "../config/env";
 
-const SECRET_KEY = process.env.SECRET_KEY as jwt.Secret;
+const SECRET_KEY = env.JWT_SECRET as jwt.Secret;
 
 export async function handleLogin(ws: WebSocket, wss: WebSocketServer, token: string) {
   try {
@@ -15,9 +16,9 @@ export async function handleLogin(ws: WebSocket, wss: WebSocketServer, token: st
 
     if (!userId) throw new Error("ID manquant dans le token");
 
-    const result = await query("SELECT id, username FROM users WHERE id = $1", [userId]);
+    const userRow = await userRepository.findById(userId);
 
-    if (!result.rows || result.rows.length === 0) {
+    if (!userRow) {
       ws.send(
         JSON.stringify({
           type: "system",
@@ -29,8 +30,7 @@ export async function handleLogin(ws: WebSocket, wss: WebSocketServer, token: st
       return;
     }
 
-    const user = result.rows[0];
-    const userName = user.username;
+    const userName = userRow.username;
 
     let existingUser = userService.get(userId);
 
