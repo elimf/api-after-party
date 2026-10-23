@@ -1,7 +1,5 @@
 import WebSocket, { Server as WebSocketServer } from "ws";
-import { v4 as uuidv4 } from "uuid";
 import { broadcastUsers, broadcastRooms } from "../utils/websocketUtils";
-import { UserConncted, Room } from "../types";
 import { handleAnswer, handleQuiz } from "./quizHandler";
 import { rooms, users } from "../data";
 import {
@@ -11,10 +9,12 @@ import {
   handleMessage,
 } from "./roomHandler";
 import { handleBacResponse, startBacGame } from "./bacGameHandler";
-import jwt from "jsonwebtoken";
-import { query } from "../db/pool";
 import { ClientToServerMessage } from "../types/ws";
 import { bacTimerManager, quizTimerManager } from "../utils/timerManager";
+import { clientMessageSchema } from "../validation/wsSchemas";
+import { handleLogin } from "./authHandler";
+import { userService } from "../services/userService";
+import { roomService } from "../services/roomService";
 
 const SECRET_KEY = process.env.SECRET_KEY;
 
@@ -30,13 +30,21 @@ export function setupWebSocket(wss: WebSocketServer) {
     let currentRoomId: string | null = null;
 
     ws.on("message", async (rawMessage: string) => {
-      let parsedMessage: ClientToServerMessage;
+      let raw: unknown;
       try {
-        parsedMessage = JSON.parse(rawMessage);
+        raw = JSON.parse(rawMessage);
       } catch (e) {
         ws.send(JSON.stringify({ type: "error", message: "Message invalide" }));
         return;
       }
+
+      const validation = clientMessageSchema.safeParse(raw);
+      if (!validation.success) {
+        ws.send(JSON.stringify({ type: "error", message: "Message invalide" }));
+        return;
+      }
+
+      const parsedMessage = validation.data as ClientToServerMessage;
 
       switch (parsedMessage.type) {
         case "start":
@@ -94,19 +102,14 @@ export function setupWebSocket(wss: WebSocketServer) {
     });
 
     ws.on("close", () => {
-      // On cherche l'utilisateur par son instance WebSocket
-      for (const [id, user] of users.entries()) {
-        if (user.ws === ws) {
-          userId = id;
-          // On cherche si cet utilisateur était dans une room spécifique
-          for (const room of rooms.values()) {
-            if (room.users.find(u => u.id === id)) {
-              currentRoomId = room.id;
-              break;
-            }
+      const foundUser = userService.findBySocket(ws);
+      if (foundUser) {
+        userId = foundUser.id;
+        roomService.forEach((room) => {
+          if (room.users.find((u) => u.id === userId)) {
+            currentRoomId = room.id;
           }
-          break;
-        }
+        });
       }
 
       if (userId) {
@@ -121,88 +124,7 @@ export function setupWebSocket(wss: WebSocketServer) {
 }
 
 // Handlers pour chaque type de message
-async function handleLogin(ws: WebSocket, wss: WebSocketServer, token: string) {
-  try {
-    // Décoder le token JWT pour obtenir l'identifiant de l'utilisateur
-    const decoded = jwt.verify(token, SECRET_KEY as jwt.Secret) as { id?: string, userId?: string };
-    const userId = decoded.id || decoded.userId;
-
-    if (!userId) throw new Error("ID manquant dans le token");
-
-    // Récupérer l'utilisateur depuis Neon PostgreSQL
-    const result = await query(
-      'SELECT id, username FROM users WHERE id = $1',
-      [userId]
-    );
-
-    if (!result.rows || result.rows.length === 0) {
-      ws.send(JSON.stringify({
-        type: "system",
-        message: "Utilisateur introuvable dans la base de données",
-        disconnect: true,
-      }));
-      ws.close();
-      return;
-    }
-
-    const user = result.rows[0];
-    const userName = user.username;
-
-    let existingUser = users.get(userId);
-
-    if (existingUser) {
-      existingUser.ws.close();
-      existingUser.ws = ws;
-
-      let roomId = "";
-      rooms.forEach((room) => {
-        const userInRoom = room.users.find((u) => u.id === userId);
-        if (userInRoom) {
-          roomId = room.id;
-          userInRoom.ws = ws;
-        }
-      });
-
-      ws.send(JSON.stringify({
-        type: "reconnect",
-        info: existingUser,
-        room: rooms.get(roomId),
-      }));
-    } else {
-      const currentUser: UserConncted = {
-        id: userId, // Utilisation de l'UUID
-        ws,
-        name: userName,
-        score: 0,
-        responseTimes: [],
-        answers: new Map(),
-        bacResponses: {},
-        hasSubmitted: false,
-      };
-      users.set(userId, currentUser);
-
-      // Vérifier si déjà présent dans une room (cas de crash serveur par ex)
-      let foundRoom = Array.from(rooms.values()).find(r => r.users.some(u => u.id === userId));
-
-      ws.send(JSON.stringify({
-        type: foundRoom ? "reconnect" : "system",
-        message: foundRoom ? undefined : `Bienvenue, ${userName}.`,
-        info: currentUser,
-        room: foundRoom || undefined
-      }));
-    }
-
-    broadcastUsers(wss, users);
-
-  } catch (error) {
-    console.error("Erreur handleLogin:", error);
-    ws.send(JSON.stringify({
-      type: "error",
-      message: "Session expirée ou invalide",
-    }));
-    ws.close();
-  }
-}
+// handleLogin moved to authHandler.ts
 
 
 function handleGetRooms(ws: WebSocket) {
