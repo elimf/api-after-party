@@ -206,15 +206,23 @@ export async function buildBlindtestQuestions(
     }
 
     if ((musicSource === "artist" || musicSource === "custom" || musicSource === "search") && sourceId) {
-      const artistsList = sourceId.split(/\s+/).filter(Boolean);
+      const artistsList = sourceId.split(/\s+/).filter(Boolean).slice(0, 5);
       let allTracks: any[] = [];
       for (const a of artistsList) {
-        const tracks = await itunesConnector.searchTracks(a, Math.max(25, numQuestions * 10));
-        allTracks = allTracks.concat(tracks);
+        try {
+          const tracks = await itunesConnector.searchTracks(a, 30);
+          allTracks = allTracks.concat(tracks);
+        } catch (e) {
+          console.error('Error searching for artist:', a, e);
+        }
       }
-      if (allTracks.length === 0 && artistsList.length > 0) {
-        const tracks = await itunesConnector.searchTracks(sourceId, Math.max(25, numQuestions * 10));
-        allTracks = tracks;
+      if (allTracks.length === 0) {
+        try {
+          const tracks = await itunesConnector.searchTracks(sourceId, 40);
+          allTracks = tracks;
+        } catch (e) {
+          console.error('Error searching for artists:', sourceId, e);
+        }
       }
       const target = normalize(sourceId);
       let filtered = allTracks.filter((t) => {
@@ -225,15 +233,15 @@ export async function buildBlindtestQuestions(
         return artist.includes(target);
       });
       if (filtered.length === 0) {
-        filtered = allTracks.filter((t) => (t.previewUrl || t.trackUri));
+        filtered = allTracks.filter((t) => (t.previewUrl || t.trackUri) && t.title);
       }
-      const usableFromFiltered = filtered.filter((t) => t.previewUrl || t.trackUri && t.title);
-      const usableFromTracks = allTracks.filter((t) => t.previewUrl || t.trackUri && t.title);
+      const usableFromFiltered = filtered.filter((t) => (t.previewUrl || t.trackUri) && t.title);
+      const usableFromTracks = allTracks.filter((t) => (t.previewUrl || t.trackUri) && t.title);
 
-      if (usableFromFiltered.length >= 1) {
+      if (usableFromFiltered.length >= 3) {
         return mapTracksToQuestions(usableFromFiltered, numQuestions, difficulty);
       }
-      if (usableFromTracks.length >= 1) {
+      if (usableFromTracks.length >= 3) {
         return mapTracksToQuestions(usableFromTracks, numQuestions, difficulty);
       }
       return getFormattedQuestions(artists, numQuestions);
